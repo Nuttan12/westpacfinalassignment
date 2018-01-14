@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -24,6 +23,7 @@ import utilities.UserActions;
 import utilities.Verify;
 import utilities.WebElementFactory;
 import utilities.excelUtilis;
+import utilities.Log;
 
 public class ConvertCurrency {
 	String CellData;
@@ -35,6 +35,7 @@ public class ConvertCurrency {
 	protected WebElementFactory elementFactory;
 	protected ScreenShots screenshots;
 	protected UserActions userActions;
+	protected Log log;
 	protected Verify verify;
 	protected Assertions assertions;
 	public WebDriverWait wait;
@@ -70,22 +71,47 @@ public class ConvertCurrency {
 		}
 		return CellData;
 	}
+	
+	/**
+	  Author Name                       : Nuttan Abhijan Swain
+	  Date of Preparation               : 12-01-2018
+	  Date of Modified                  : 14-01-2018
+	  Methods Called                     :
+	  									  clickOn(String controlName),waitTillPageLoads(),
+	  									  getElement(String controlName),waitForElementToBeClickable(String controlName)
+	  									  getElementText(String controlName)
+	  Purpose of Method                 : Verify User is able to convert one or more currency or not
+	  Dependencies	                    : Jar files
+	  Reviewed By                       : 
+	 **/
 
 	public void convertCurrencyValidation(String fromCurrency,String ToCurrency,String val) {
 		
 
 		dynamicWait.waitTillPageLoads();
+		Log.info("Switching to IFrame");
 		driver.switchTo().frame("westpac-iframe");
 		WebDriverWait wait = new WebDriverWait(driver,10);
 		Select convertFrom = new Select(wait.until(ExpectedConditions.elementToBeClickable(By.id("ConvertFrom"))));
 		Select convertTo = new Select(wait.until(ExpectedConditions.elementToBeClickable(By.id("ConvertTo"))));
+		Log.info("Selecting currency from ConvertFrom Dropdown");
 		convertFrom.selectByVisibleText(dataMap.get(fromCurrency));
+		Log.info("Entering amount to be converted");
 		elementFactory.getElement("Currencyconverter_InputAmount").sendKeys(val);
+		Log.info("Selecting currency from ConvertTo Dropdown");
 		convertTo.selectByVisibleText(dataMap.get(ToCurrency));
+		Log.info("Clicking on Convert Button");
 		userActions.clickOn("Currencyconverter_ConvertButton");
 		dynamicWait.waitTime(4);
+		if (assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"), val+" "+dataMap.get(fromCurrency)) &&
+				assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"), dataMap.get(ToCurrency)) &&	
+				assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"),"Rates updated"))
+		{
+	    Log.info("Switching to default content");		
 		driver.switchTo().defaultContent();
+		Log.info("Refreshing the webpage");
 		driver.navigate().refresh();
+		}
 	}
 	
 	public boolean validatingInputBox(String controlName) {

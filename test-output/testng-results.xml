@@ -2,47 +2,12 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
     <line>
-      <![CDATA[java.lang.NullPointerException: null value in entry: url=null
-	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
-	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:39)
-	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:49)
-	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:70)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
-	at businessFunction.WestpacNZPortal.newTransactionPortalLunch(WestpacNZPortal.java:60)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:178)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-    </line>
-    <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.hoverOn(UserActions.java:105)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:179)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:202)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -74,7 +39,7 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:181)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:206)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -104,10 +69,10 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:181)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:206)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -137,8 +102,8 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:185)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:215)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -169,7 +134,7 @@
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:186)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:217)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -201,7 +166,7 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:187)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:220)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -231,10 +196,10 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:187)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:220)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -264,9 +229,9 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
-	at utilities.WebElementFactory.getElementText(WebElementFactory.java:141)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:189)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at utilities.WebElementFactory.getElementText(WebElementFactory.java:132)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:223)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -297,47 +262,12 @@
       <![CDATA[D:\Nuttan_WestpacAssignment\westpacAssignment\Screenshot\null.png]]>
     </line>
     <line>
-      <![CDATA[java.lang.NullPointerException: null value in entry: url=null
-	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
-	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:39)
-	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:49)
-	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:70)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
-	at businessFunction.WestpacNZPortal.newTransactionPortalLunch(WestpacNZPortal.java:60)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:198)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-    </line>
-    <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.hoverOn(UserActions.java:105)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:199)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:247)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -369,7 +299,7 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:201)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:250)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -399,10 +329,10 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:201)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:250)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -432,9 +362,9 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:83)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:204)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:88)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:255)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -466,8 +396,8 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:204)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:255)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -497,11 +427,11 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:204)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:255)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -531,9 +461,9 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:83)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:206)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:88)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:258)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -565,8 +495,8 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:206)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:258)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -596,11 +526,11 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:206)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:258)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -630,9 +560,9 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:83)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:208)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:88)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:261)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -664,8 +594,8 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:208)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:261)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -695,11 +625,11 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:208)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:261)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -729,9 +659,9 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:83)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:210)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:88)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:264)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -763,8 +693,8 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:210)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:264)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -794,11 +724,11 @@
     <line>
       <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:210)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:264)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -829,12 +759,12 @@
       <![CDATA[D:\Nuttan_WestpacAssignment\westpacAssignment\Screenshot\null.png]]>
     </line>
   </reporter-output>
-  <suite name="Regression" duration-ms="136087" started-at="2018-01-14T13:32:13Z" finished-at="2018-01-14T13:34:29Z">
+  <suite name="Regression" duration-ms="186399" started-at="2018-01-14T19:20:01Z" finished-at="2018-01-14T19:23:08Z">
     <groups>
     </groups>
-    <test name="SmokeTestCases" duration-ms="136087" started-at="2018-01-14T13:32:13Z" finished-at="2018-01-14T13:34:29Z">
+    <test name="SmokeTestCases" duration-ms="186399" started-at="2018-01-14T19:20:01Z" finished-at="2018-01-14T19:23:08Z">
       <class name="test.westPacApplication">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:test.westPacApplication@e45f292]" name="setup" is-config="true" duration-ms="11467" started-at="2018-01-14T19:02:13Z" finished-at="2018-01-14T19:02:24Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:test.westPacApplication@a67c67e]" name="setup" is-config="true" duration-ms="16555" started-at="2018-01-15T00:50:01Z" finished-at="2018-01-15T00:50:18Z">
           <params>
             <param index="0">
               <value>
@@ -845,50 +775,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="ValidatingErrorMessage()[pri:1, instance:test.westPacApplication@e45f292]" name="ValidatingErrorMessage" duration-ms="17655" started-at="2018-01-14T19:02:24Z" description="Validating Error Message on Currency Converter Page" finished-at="2018-01-14T19:02:42Z">
+        <test-method status="PASS" signature="ValidatingErrorMessage()[pri:1, instance:test.westPacApplication@a67c67e]" name="ValidatingErrorMessage" duration-ms="27681" started-at="2018-01-15T00:50:18Z" description="Validating Error Message on Currency Converter Page" finished-at="2018-01-15T00:50:46Z">
           <reporter-output>
             <line>
-              <![CDATA[java.lang.NullPointerException: null value in entry: url=null
-	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
-	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:39)
-	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:49)
-	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:70)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
-	at businessFunction.WestpacNZPortal.newTransactionPortalLunch(WestpacNZPortal.java:60)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:178)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </line>
-            <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.hoverOn(UserActions.java:105)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:179)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:202)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -920,7 +815,7 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:181)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:206)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -950,10 +845,10 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:181)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:206)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -983,8 +878,8 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:185)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:215)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1015,7 +910,7 @@
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:186)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:217)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1047,7 +942,7 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:187)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:220)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1077,10 +972,10 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:187)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:220)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1110,9 +1005,9 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
-	at utilities.WebElementFactory.getElementText(WebElementFactory.java:141)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:189)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at utilities.WebElementFactory.getElementText(WebElementFactory.java:132)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:223)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1141,18 +1036,16 @@
             </line>
           </reporter-output>
         </test-method> <!-- ValidatingErrorMessage -->
-        <test-method status="PASS" signature="logStatus(org.testng.ITestResult)[pri:0, instance:test.westPacApplication@e45f292]" name="logStatus" is-config="true" duration-ms="1753" started-at="2018-01-14T19:02:42Z" finished-at="2018-01-14T19:02:44Z">
+        <test-method status="PASS" signature="logStatus(org.testng.ITestResult)[pri:0, instance:test.westPacApplication@a67c67e]" name="logStatus" is-config="true" duration-ms="2272" started-at="2018-01-15T00:50:46Z" finished-at="2018-01-15T00:50:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidatingErrorMessage status=SUCCESS method=westPacApplication.ValidatingErrorMessage()[pri:1, instance:test.westPacApplication@e45f292] output=java.lang.NullPointerException: null value in entry: url=null
-	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
-	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:39)
-	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:49)
-	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:70)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
-	at businessFunction.WestpacNZPortal.newTransactionPortalLunch(WestpacNZPortal.java:60)
-	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:178)
+                <![CDATA[[TestResult name=ValidatingErrorMessage status=SUCCESS method=westPacApplication.ValidatingErrorMessage()[pri:1, instance:test.westPacApplication@a67c67e] output=java.lang.NullPointerException
+	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
+	at utilities.UserActions.hoverOn(UserActions.java:105)
+	at test.westPacApplication.ValidatingErrorMessage(westPacApplication.java:202)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1187,7 +1080,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- logStatus -->
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:test.westPacApplication@e45f292]" name="setup" is-config="true" duration-ms="10770" started-at="2018-01-14T19:02:44Z" finished-at="2018-01-14T19:02:55Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:test.westPacApplication@a67c67e]" name="setup" is-config="true" duration-ms="14320" started-at="2018-01-15T00:50:48Z" finished-at="2018-01-15T00:51:02Z">
           <params>
             <param index="0">
               <value>
@@ -1198,50 +1091,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="ValidatingConversionCurrency()[pri:2, instance:test.westPacApplication@e45f292]" name="ValidatingConversionCurrency" duration-ms="93170" started-at="2018-01-14T19:02:55Z" description="Conversion Of Currency" finished-at="2018-01-14T19:04:28Z">
+        <test-method status="PASS" signature="ValidatingConversionCurrency()[pri:2, instance:test.westPacApplication@a67c67e]" name="ValidatingConversionCurrency" duration-ms="123939" started-at="2018-01-15T00:51:02Z" description="Conversion Of Currency" finished-at="2018-01-15T00:53:06Z">
           <reporter-output>
             <line>
-              <![CDATA[java.lang.NullPointerException: null value in entry: url=null
-	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
-	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:39)
-	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:49)
-	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:70)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
-	at businessFunction.WestpacNZPortal.newTransactionPortalLunch(WestpacNZPortal.java:60)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:198)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </line>
-            <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.hoverOn(UserActions.java:105)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:199)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:247)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1273,7 +1131,7 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:201)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:250)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1303,10 +1161,10 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:201)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:250)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1336,9 +1194,9 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:83)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:204)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:88)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:255)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1370,8 +1228,8 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:204)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:255)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1401,11 +1259,11 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:204)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:255)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1435,9 +1293,9 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:83)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:206)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:88)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:258)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1469,8 +1327,8 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:206)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:258)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1500,11 +1358,11 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:206)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:258)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1534,9 +1392,9 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:83)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:208)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:88)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:261)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1568,8 +1426,8 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:208)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:261)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1599,11 +1457,11 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:208)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:261)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1633,9 +1491,9 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:83)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:210)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:88)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:264)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1667,8 +1525,8 @@
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
 	at utilities.DynamicWait.waitForElementToBeClickable(DynamicWait.java:44)
 	at utilities.UserActions.clickOn(UserActions.java:77)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:210)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:264)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1698,11 +1556,11 @@
             <line>
               <![CDATA[java.lang.NullPointerException
 	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
-	at utilities.WebElementFactory.getElement(WebElementFactory.java:180)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
 	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
 	at utilities.UserActions.clickOn(UserActions.java:78)
-	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:85)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:210)
+	at businessFunction.ConvertCurrency.convertCurrencyValidation(ConvertCurrency.java:92)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:264)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1731,18 +1589,16 @@
             </line>
           </reporter-output>
         </test-method> <!-- ValidatingConversionCurrency -->
-        <test-method status="PASS" signature="logStatus(org.testng.ITestResult)[pri:0, instance:test.westPacApplication@e45f292]" name="logStatus" is-config="true" duration-ms="1253" started-at="2018-01-14T19:04:28Z" finished-at="2018-01-14T19:04:29Z">
+        <test-method status="PASS" signature="logStatus(org.testng.ITestResult)[pri:0, instance:test.westPacApplication@a67c67e]" name="logStatus" is-config="true" duration-ms="1600" started-at="2018-01-15T00:53:06Z" finished-at="2018-01-15T00:53:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidatingConversionCurrency status=SUCCESS method=westPacApplication.ValidatingConversionCurrency()[pri:2, instance:test.westPacApplication@e45f292] output=java.lang.NullPointerException: null value in entry: url=null
-	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
-	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:39)
-	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:49)
-	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:70)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
-	at businessFunction.WestpacNZPortal.newTransactionPortalLunch(WestpacNZPortal.java:60)
-	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:198)
+                <![CDATA[[TestResult name=ValidatingConversionCurrency status=SUCCESS method=westPacApplication.ValidatingConversionCurrency()[pri:2, instance:test.westPacApplication@a67c67e] output=java.lang.NullPointerException
+	at objectRepository.ObjectFactory.createObjectMap(ObjectFactory.java:35)
+	at utilities.WebElementFactory.getElement(WebElementFactory.java:171)
+	at utilities.WebElementFactory.doMouseAction(WebElementFactory.java:49)
+	at utilities.UserActions.hoverOn(UserActions.java:105)
+	at test.westPacApplication.ValidatingConversionCurrency(westPacApplication.java:247)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -1777,7 +1633,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- logStatus -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:test.westPacApplication@e45f292]" name="teardown" is-config="true" duration-ms="0" started-at="2018-01-14T19:04:29Z" finished-at="2018-01-14T19:04:29Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:test.westPacApplication@a67c67e]" name="teardown" is-config="true" duration-ms="0" started-at="2018-01-15T00:53:08Z" finished-at="2018-01-15T00:53:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

@@ -8,6 +8,8 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxBinary;
@@ -64,6 +66,9 @@ public class westPacApplication {
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
 	ExtentTest logger;
+	
+	Logger log=Logger.getLogger("WestpacApplication");
+	
 
 	@Parameters({ "browser" })
 	@BeforeMethod()
@@ -133,6 +138,8 @@ public class westPacApplication {
 			htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 			htmlReporter.config().setTheme(Theme.STANDARD);
 			
+			PropertyConfigurator.configure("log4j.properties");
+			
 
 		} catch (Exception exception) {
 			Reporter.log("Browser Setup Failure " + ExceptionUtils.getStackTrace(exception));
@@ -188,25 +195,29 @@ public class westPacApplication {
 		
 		logger= extent.createTest("ValidatingErrorMessage");
 		//Launching the WestPac Newzealand Website
-		logger.log(Status.INFO, "Launching WestpacNewzealand Transaction Portal");
+		log.info("Launching WestpacNewzealand Transaction Portal");
 		westpacNZPortal.get().newTransactionPortalLunch();
 		//To hover on FX,Travel and Migrant tab.
+		log.info("Hovering on FX,Travel and Migrant tab");
 		userActions.get().hoverOn("LoginPage_ MenuHover");
-		logger.log(Status.INFO, "Hovering on menu and clicking on currency Converter");
 		//To click on Currency Converter option
+		log.info("Clicking on Currency converter option");
 		userActions.get().clickOn("LoginPage_Currencyconverter");
 		//Waiting till the page completely loads
+		log.info("Waiting for the page to load completely");
 		dynamicWait.get().waitTillPageLoads();
 		dynamicWait.get().waitTime(10);
 		//Switching to iframe present in the transaction page
+		log.info("Switching to iframe");
 		driver.switchTo().frame("westpac-iframe");
 		//To clear the input amount text box
+		log.info("clearing the input amount text box");
 		elementFactory.get().getElement("Currencyconverter_InputAmount").clear();
 		//Waiting period for the currency converter button to be clickable
         dynamicWait.get().waitForElementToBeClickable("Currencyconverter_ConvertButton");
         //Click on Convert Button
+        log.info("Clicking on convert button");
 		userActions.get().clickOn("Currencyconverter_ConvertButton");
-		logger.log(Status.INFO, "Validating error message");
 		//To verify the system generated error message and expected error message are equal or not
 		assertions.get().stringAssertContains(elementFactory.get().getElementText("Currencyconverter_ErrorMessage"), dataMap.get("ErrorMessage"));
 		logger.addScreenCaptureFromPath("screenshot.png");
@@ -229,26 +240,27 @@ public class westPacApplication {
 	public void ValidatingConversionCurrency() throws Exception {
 		logger= extent.createTest("ValidatingConversionCurrency");
 		//Launching the WestPac Newzealand Website
-		logger.log(Status.INFO, "Launching WestpacNewzealand Transaction Portal");
+		log.info("Launching WestpacNewzealand Transaction Portal");
 		westpacNZPortal.get().newTransactionPortalLunch();
 		//To hover on FX,Travel and Migrant tab.
+		log.info("Hovering on FX,Travel and Migrant tab");
 		userActions.get().hoverOn("LoginPage_ MenuHover");
-		logger.log(Status.INFO, "Hovering on menu and clicking on currency Converter");
 		//To click on Currency Converter option
+		log.info("Clicking on Currency converter option");
 		userActions.get().clickOn("LoginPage_Currencyconverter");
 		//Waiting till the page completely loads
 		dynamicWait.get().waitTime(4);
 		//Implemented method for Converting Newzealand Dollar to US Dollar
-		logger.log(Status.INFO, "Converting Newzealand Dollar to US Dollar");
+		log.info("Converting Newzealand Dollar to US Dollar");
 		convertCurrency.get().convertCurrencyValidation("NZ","US","1");
 		//Implemented method for Converting US Dollar to Newzealand Dollar
-		logger.log(Status.INFO, "Converting  US Dollar to Newzealand Dollar");
+		log.info("Converting US Dollar to Newzealand Dollar");
 		convertCurrency.get().convertCurrencyValidation("US","NZ","1");
 		//Implemented method for Converting Pound Sterling to Newzealand Dollar
-		logger.log(Status.INFO, "Converting  Pound Sterling to Newzealand Dollar");
+		log.info("Converting Pound Sterling to Newzealand Dollar");
 		convertCurrency.get().convertCurrencyValidation("PS","NZ","1");
 		//Implemented method for Converting  Swiss Franc to Euro
-		logger.log(Status.INFO, "Converting  Swiss Franc to Euro");
+		log.info("Converting Converting  Swiss Franc to Euro");
 		convertCurrency.get().convertCurrencyValidation("SF","EU","1");
 		logger.log(Status.PASS, MarkupHelper.createLabel("ValidatingConversionCurrency is passed", ExtentColor.GREEN));
 		
