@@ -183,7 +183,7 @@ public class westPacApplication {
 	
 	@Test(priority = 2, description = "Conversion Of Currency")
 	public void ValidatingConversionCurrency() throws Exception {
-		//second commit again
+		//second commit again hello
 		logger2 = extent.createTest("ValidatingConversionCurrency");
 		westpacNZPortal.get().newTransactionPortalLunch();
 		userActions.get().hoverOn("LoginPage_ MenuHover");
