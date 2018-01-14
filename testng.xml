@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Regression">
+  <test name="SmokeTestCases">
+  <parameters>
+		<parameter name="platform" value="Windows" />
+		<parameter name="browser" value="iexplorer" />
+		<parameter name="version" value="46v" />
+	</parameters>
+		<classes>
+			<class name="test.westPacApplication">
+				<methods>
+					<include name="ValidatingErrorMessage" />
+					<include name="ValidatingConversionCurrency" />
+				</methods>
+			</class>
+		</classes>
+  </test> 
+</suite>

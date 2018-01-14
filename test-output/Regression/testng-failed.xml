@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Regression]">
+  <parameter name="browser" value="iexplorer"/>
+  <parameter name="version" value="46v"/>
+  <parameter name="platform" value="Windows"/>
+  <test name="SmokeTestCases(failed)">
+    <parameter name="browser" value="iexplorer"/>
+    <parameter name="version" value="46v"/>
+    <parameter name="platform" value="Windows"/>
+    <classes>
+      <class name="test.westPacApplication">
+        <methods>
+          <include name="setup"/>
+          <include name="logStatus"/>
+          <include name="teardown"/>
+          <include name="ValidatingErrorMessage"/>
+        </methods>
+      </class> <!-- test.westPacApplication -->
+    </classes>
+  </test> <!-- SmokeTestCases(failed) -->
+</suite> <!-- Failed suite [Regression] -->
