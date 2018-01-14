@@ -58,5 +58,6 @@
 	<classpathentry kind="lib" path="D:/Nuttan_WestpacAssignment/westpacAssignment/jarfiles/extentreports-java-3.0.6/lib/mongodb-driver-3.3.0.jar"/>
 	<classpathentry kind="lib" path="D:/Nuttan_WestpacAssignment/westpacAssignment/jarfiles/extentreports-java-3.0.6/lib/mongodb-driver-core-3.3.0.jar"/>
 	<classpathentry kind="lib" path="D:/Nuttan_WestpacAssignment/westpacAssignment/jarfiles/extentreports-java-3.0.6/lib/testng-6.9.10.jar"/>
+	<classpathentry kind="lib" path="D:/Nuttan_WestpacAssignment/westpacAssignment/jarfiles/apache-log4j-1.2.17/log4j-1.2.17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

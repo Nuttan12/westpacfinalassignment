@@ -12,9 +12,9 @@
       <class name="test.westPacApplication">
         <methods>
           <include name="setup"/>
+          <include name="ValidatingConversionCurrency"/>
           <include name="logStatus"/>
           <include name="teardown"/>
-          <include name="ValidatingErrorMessage"/>
         </methods>
       </class> <!-- test.westPacApplication -->
     </classes>

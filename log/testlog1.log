@@ -1,0 +1,68 @@
+2018-01-15 00:50:18,564 [main] INFO WestpacApplication - Browser Opened
+2018-01-15 00:50:30,073 [main] INFO WestpacApplication - Hovering on menu and clicking on currency Converter
+2018-01-15 00:50:41,825 [main] INFO WestpacApplication - Switching to iframe
+2018-01-15 00:50:42,403 [main] INFO WestpacApplication - clearing the input amount text box
+2018-01-15 00:50:43,336 [main] INFO WestpacApplication - Clicking on convert button
+2018-01-15 00:51:26,604 [main] INFO utilities.Log - Switching to IFrame
+2018-01-15 00:51:27,552 [main] INFO utilities.Log - Selecting currency from ConvertFrom Dropdown
+2018-01-15 00:51:27,788 [main] INFO utilities.Log - Entering amount to be converted
+2018-01-15 00:51:33,328 [main] INFO utilities.Log - Selecting currency from ConvertTo Dropdown
+2018-01-15 00:51:33,917 [main] INFO utilities.Log - Clicking on Convert Button
+2018-01-15 00:51:40,894 [main] INFO utilities.Log - Switching to default content
+2018-01-15 00:51:53,269 [main] INFO utilities.Log - Switching to IFrame
+2018-01-15 00:51:54,228 [main] INFO utilities.Log - Selecting currency from ConvertFrom Dropdown
+2018-01-15 00:51:54,536 [main] INFO utilities.Log - Entering amount to be converted
+2018-01-15 00:51:59,855 [main] INFO utilities.Log - Selecting currency from ConvertTo Dropdown
+2018-01-15 00:51:59,998 [main] INFO utilities.Log - Clicking on Convert Button
+2018-01-15 00:52:05,827 [main] INFO utilities.Log - Switching to default content
+2018-01-15 00:52:16,945 [main] INFO utilities.Log - Switching to IFrame
+2018-01-15 00:52:17,973 [main] INFO utilities.Log - Selecting currency from ConvertFrom Dropdown
+2018-01-15 00:52:18,329 [main] INFO utilities.Log - Entering amount to be converted
+2018-01-15 00:52:24,029 [main] INFO utilities.Log - Selecting currency from ConvertTo Dropdown
+2018-01-15 00:52:24,277 [main] INFO utilities.Log - Clicking on Convert Button
+2018-01-15 00:52:30,690 [main] INFO utilities.Log - Switching to default content
+2018-01-15 00:52:42,373 [main] INFO utilities.Log - Switching to IFrame
+2018-01-15 00:52:43,468 [main] INFO utilities.Log - Selecting currency from ConvertFrom Dropdown
+2018-01-15 00:52:43,940 [main] INFO utilities.Log - Entering amount to be converted
+2018-01-15 00:52:49,604 [main] INFO utilities.Log - Selecting currency from ConvertTo Dropdown
+2018-01-15 00:52:50,069 [main] INFO utilities.Log - Clicking on Convert Button
+2018-01-15 00:52:55,985 [main] INFO utilities.Log - Switching to default content
+2018-01-15 03:14:20,423 [main] INFO WestpacApplication - Launching WestpacNewzealand Transaction Portal
+2018-01-15 03:14:27,010 [main] INFO WestpacApplication - Hovering on FX,Travel and Migrant tab
+2018-01-15 03:14:27,633 [main] INFO WestpacApplication - Clicking on Currency converter option
+2018-01-15 03:14:28,761 [main] INFO WestpacApplication - Waiting for the page to load completely
+2018-01-15 03:14:38,840 [main] INFO WestpacApplication - Switching to iframe
+2018-01-15 03:14:39,271 [main] INFO WestpacApplication - clearing the input amount text box
+2018-01-15 03:14:39,995 [main] INFO WestpacApplication - Clicking on convert button
+2018-01-15 03:14:59,207 [main] INFO WestpacApplication - Launching WestpacNewzealand Transaction Portal
+2018-01-15 03:15:09,773 [main] INFO WestpacApplication - Hovering on FX,Travel and Migrant tab
+2018-01-15 03:15:10,640 [main] INFO WestpacApplication - Clicking on Currency converter option
+2018-01-15 03:15:15,884 [main] INFO WestpacApplication - Converting Newzealand Dollar to US Dollar
+2018-01-15 03:15:22,022 [main] INFO utilities.Log - Switching to IFrame
+2018-01-15 03:15:22,854 [main] INFO utilities.Log - Selecting currency from ConvertFrom Dropdown
+2018-01-15 03:15:23,094 [main] INFO utilities.Log - Entering amount to be converted
+2018-01-15 03:15:28,549 [main] INFO utilities.Log - Selecting currency from ConvertTo Dropdown
+2018-01-15 03:15:28,940 [main] INFO utilities.Log - Clicking on Convert Button
+2018-01-15 03:17:59,546 [main] INFO WestpacApplication - Launching WestpacNewzealand Transaction Portal
+2018-01-15 03:18:06,394 [main] INFO WestpacApplication - Hovering on FX,Travel and Migrant tab
+2018-01-15 03:18:07,217 [main] INFO WestpacApplication - Clicking on Currency converter option
+2018-01-15 03:18:12,817 [main] INFO WestpacApplication - Converting Newzealand Dollar to US Dollar
+2018-01-15 03:18:13,624 [main] INFO utilities.Log - Switching to IFrame
+2018-01-15 03:18:14,492 [main] INFO utilities.Log - Selecting currency from ConvertFrom Dropdown
+2018-01-15 03:18:14,818 [main] INFO utilities.Log - Entering amount to be converted
+2018-01-15 03:18:20,230 [main] INFO utilities.Log - Selecting currency from ConvertTo Dropdown
+2018-01-15 03:18:20,634 [main] INFO utilities.Log - Clicking on Convert Button
+2018-01-15 03:23:00,673 [main] INFO WestpacApplication - Launching WestpacNewzealand Transaction Portal
+2018-01-15 03:23:06,491 [main] INFO WestpacApplication - Hovering on FX,Travel and Migrant tab
+2018-01-15 03:23:08,798 [main] INFO WestpacApplication - Clicking on Currency converter option
+2018-01-15 03:23:14,265 [main] INFO WestpacApplication - Converting Newzealand Dollar to US Dollar
+2018-01-15 03:23:14,807 [main] INFO utilities.Log - Switching to IFrame
+2018-01-15 03:23:16,335 [main] INFO utilities.Log - Selecting currency from ConvertFrom Dropdown
+2018-01-15 03:23:16,563 [main] INFO utilities.Log - Entering amount to be converted
+2018-01-15 03:23:22,240 [main] INFO utilities.Log - Selecting currency from ConvertTo Dropdown
+2018-01-15 03:23:22,595 [main] INFO utilities.Log - Clicking on Convert Button
+2018-01-15 03:23:28,917 [main] INFO utilities.Log - Switching to default content
+2018-01-15 03:23:28,937 [main] INFO utilities.Log - Refreshing the webpage
+2018-01-15 03:23:38,594 [main] INFO WestpacApplication - Converting US Dollar to Newzealand Dollar
+2018-01-15 03:23:38,595 [main] INFO WestpacApplication - Converting Pound Sterling to Newzealand Dollar
+2018-01-15 03:23:38,597 [main] INFO WestpacApplication - Converting Converting  Swiss Franc to Euro

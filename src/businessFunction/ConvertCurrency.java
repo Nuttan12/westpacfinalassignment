@@ -103,6 +103,7 @@ public class ConvertCurrency {
 		Log.info("Clicking on Convert Button");
 		userActions.clickOn("Currencyconverter_ConvertButton");
 		dynamicWait.waitTime(4);
+		System.out.println(val+" "+dataMap.get(fromCurrency));
 		if (assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"), val+" "+dataMap.get(fromCurrency)) &&
 				assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"), dataMap.get(ToCurrency)) &&	
 				assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"),"Rates updated"))
