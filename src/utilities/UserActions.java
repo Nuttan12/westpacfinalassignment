@@ -66,10 +66,7 @@ public class UserActions {
 		elementFactory.enterText(controlName, text);
 	}
 
-	public void clickAlertOk() {
-		alert = driver.switchTo().alert();
-		alert.accept();
-	}
+
 
 	public void clearTextBox(String controlName) {
 		elementFactory.doMouseAction(controlName, "clear");
@@ -86,10 +83,6 @@ public class UserActions {
 		}
 	}
 
-	public void enterTextOnActiveElement(String controlName, String text) {
-		String inputText = dataMap.get(text);
-		elementFactory.enterTextOnSelectedTextBox(controlName, inputText);
-	}
 
 	public void clickAndHold(String controlName) {
 		elementFactory.doMouseAction(controlName, "clickandhold");
@@ -107,13 +100,6 @@ public class UserActions {
 		}
 	}
 
-	public void doubleClick(String controlName) {
-		elementFactory.doMouseAction(controlName, "doubleclick");
-	}
-
-	public void contextClick(String controlName) {
-		elementFactory.doMouseAction(controlName, "contextclick");
-	}
 
 	public void hoverOn(String controlName) {
 		elementFactory.doMouseAction(controlName, "hover");
@@ -127,50 +113,10 @@ public class UserActions {
 		action.perform();
 	}
 
-	public void release(String controlName) {
-		elementFactory.doMouseAction(controlName, "release");
-	}
-
-	public void clickOnElement(WebElement element) {
-		try {
-			element.click();
-		} catch (NoSuchElementException exception) {
-			Reporter.log(ExceptionUtils.getStackTrace(exception));
-		}
-	}
 
 	public void enterText(String controlname, String text) {
 		String inputText = dataMap.get(text);
 		elementFactory.enterText(controlname, inputText);
-	}
-
-	public void switchToChildWindow() {
-		try {
-			dynamicWait.waitTime(8);
-		} catch (Exception exception) {
-			Reporter.log(ExceptionUtils.getStackTrace(exception));
-		}
-		Set<String> windows = driver.getWindowHandles();
-		if (windows.size() != 1) {
-			parentWindow = driver.getWindowHandle();
-			windows.remove(parentWindow);
-			driver.switchTo().window(windows.iterator().next());
-			driver.manage().window().maximize();
-		} else {
-			if (timer == 1) {
-				try {
-					dynamicWait.waitTime(8);
-				} catch (Exception exception) {
-					Reporter.log(ExceptionUtils.getStackTrace(exception));
-				}
-				timer++;
-				switchToChildWindow();
-			} else {
-				screenshots.takeScreenShots();
-				throw new ExceptionHandling_NoSuchWindowException();
-			}
-		}
-
 	}
 
 	public void selectFromDropdownMenu(String ControlName, String text) {
@@ -226,16 +172,7 @@ public class UserActions {
 		return true;
 	}
 
-	public void closeChildWindow() {
-		if (parentWindow == null) {
-			switchToChildWindow();
-			driver.close();
-			switchToParentWindow();
-		} else {
-			driver.close();
-			switchToParentWindow();
-		}
-	}
+	
 
 	public List<WebElement> getElements(String controlName) {
 		return elementFactory.getElements(controlName);
@@ -249,21 +186,6 @@ public class UserActions {
 		return elementFactory.getElement(controlName).getText();
 	}
 
-	public String getCssProperty(String controlName, String cssAttribute) {
-		return elementFactory.getElement(controlName).getCssValue(cssAttribute);
-	}
-
-	public String getCssProperty(WebElement uiControl, String cssAttribute) {
-		return uiControl.getCssValue(cssAttribute);
-	}
-
-	public String getHtmlAttribute(String controlName, String htmlAttribute) {
-		return elementFactory.getElement(controlName).getAttribute(htmlAttribute);
-	}
-
-	public String getHtmlAttribute(WebElement element, String htmlAttribute) {
-		return element.getAttribute(htmlAttribute);
-	}
 
 	public UIControlObject getUIControlObject(String controlName) {
 		ObjectFactory factory = new ObjectFactory();
@@ -288,16 +210,6 @@ public class UserActions {
 		new Select(elementFactory.getElement(controlName)).selectByVisibleText("text");
 	}
 
-	public void scriptClickOn(String controlName) {
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
-		WebElement element = elementFactory.getElement(controlName);
-		executor.executeScript("arguments[0].click();", element);
-	}
-
-	public void scriptClickOnElement(WebElement element) {
-		JavascriptExecutor executor = (JavascriptExecutor) driver;
-		executor.executeScript("arguments[0].click();", element);
-	}
 
 	public void selectOptionWithText(String controlName, String textToSelect) {
 		WebElement element = elementFactory.getElement(controlName);
@@ -310,17 +222,6 @@ public class UserActions {
 		}
 	}
 
-	public void selectDifferentValueFromDropdownMenu(String ControlName, String text) {
-		WebElement element = elementFactory.getElement(ControlName);
-		List<WebElement> list = element.findElements(By.tagName("li"));
-		for (int i = 0; i < list.size(); i++) {
-			if (!list.get(i).getText().trim().isEmpty()
-					&& !(list.get(i).getText().trim()).contains(text.trim().substring(0, 8))) {
-				list.get(i).click();
-				break;
-			}
-		}
-	}
 
 	public void verifyValueFromDropDown(String ControlName) {
 		WebElement element = elementFactory.getElement(ControlName);
@@ -335,14 +236,4 @@ public class UserActions {
 			}
 		}
 	}
-
-	public void enterDataOnActiveElement(String controlName, String text) {
-		elementFactory.enterTextOnSelectedTextBox(controlName, text);
-	}
-
-	public void clickonCheckBox(String ControlName) {
-		elementFactory.getElement(ControlName).click();
-		// list.get(1).click();
-	}
-
 }

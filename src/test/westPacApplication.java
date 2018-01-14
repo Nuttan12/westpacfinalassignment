@@ -28,6 +28,8 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.ChartLocation;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import properties.LoadFrameworkProp;
 import testData.TestDataFactory;
@@ -126,6 +128,11 @@ public class westPacApplication {
 			extent.setSystemInfo("Environment", "Automation Testing");
 			extent.setSystemInfo("User Name", "Nuttan Abhijan Swain");
 			
+			htmlReporter.config().setDocumentTitle("WestPacNewZealand Automation");
+			htmlReporter.config().setReportName("Automation Regression Suite");
+			htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
+			htmlReporter.config().setTheme(Theme.STANDARD);
+			
 
 		} catch (Exception exception) {
 			Reporter.log("Browser Setup Failure " + ExceptionUtils.getStackTrace(exception));
@@ -167,8 +174,10 @@ public class westPacApplication {
 	public void ValidatingErrorMessage() throws Exception {
 		
 		logger= extent.createTest("ValidatingErrorMessage");
+		logger.log(Status.INFO, "Launching WestpacNewzealand Transaction Portal");
 		westpacNZPortal.get().newTransactionPortalLunch();
 		userActions.get().hoverOn("LoginPage_ MenuHover");
+		logger.log(Status.INFO, "Hovering on menu and clicking on currency Converter");
 		userActions.get().clickOn("LoginPage_Currencyconverter");
 		dynamicWait.get().waitTillPageLoads();
 		dynamicWait.get().waitTime(10);
@@ -176,21 +185,28 @@ public class westPacApplication {
 		elementFactory.get().getElement("Currencyconverter_InputAmount").clear();
         dynamicWait.get().waitForElementToBeClickable("Currencyconverter_ConvertButton");
 		userActions.get().clickOn("Currencyconverter_ConvertButton");
+		logger.log(Status.INFO, "Validating error message");
 		assertions.get().stringAssertContains(elementFactory.get().getElementText("Currencyconverter_ErrorMessage"), dataMap.get("ErrorMessage"));
-		logger.log(Status.PASS, MarkupHelper.createLabel("TValidatingErrorMessage test case is passed", ExtentColor.GREEN));
+		logger.addScreenCaptureFromPath("screenshot.png");
+		logger.log(Status.PASS, MarkupHelper.createLabel("ValidatingErrorMessage test case is passed", ExtentColor.GREEN));
 	}
 	
 	@Test(priority = 2, description = "Conversion Of Currency")
 	public void ValidatingConversionCurrency() throws Exception {
-		//second commit again hello
 		logger= extent.createTest("ValidatingConversionCurrency");
+		logger.log(Status.INFO, "Launching WestpacNewzealand Transaction Portal");
 		westpacNZPortal.get().newTransactionPortalLunch();
 		userActions.get().hoverOn("LoginPage_ MenuHover");
+		logger.log(Status.INFO, "Hovering on menu and clicking on currency Converter");
 		userActions.get().clickOn("LoginPage_Currencyconverter");
 		dynamicWait.get().waitTime(4);
+		logger.log(Status.INFO, "Converting Newzealand Dollar to US Dollar");
 		convertCurrency.get().convertCurrencyValidation("NZ","US","1");
+		logger.log(Status.INFO, "Converting  US Dollar to Newzealand Dollar");
 		convertCurrency.get().convertCurrencyValidation("US","NZ","1");
+		logger.log(Status.INFO, "Converting  Pound Sterling to Newzealand Dollar");
 		convertCurrency.get().convertCurrencyValidation("PS","NZ","1");
+		logger.log(Status.INFO, "Converting  Swiss Franc to Euro");
 		convertCurrency.get().convertCurrencyValidation("SF","EU","1");
 		logger.log(Status.PASS, MarkupHelper.createLabel("ValidatingConversionCurrency is passed", ExtentColor.GREEN));
 		
