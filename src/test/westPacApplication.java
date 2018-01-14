@@ -255,13 +255,13 @@ public class westPacApplication {
 		convertCurrency.get().convertCurrencyValidation("NZ","US","1");
 		//Implemented method for Converting US Dollar to Newzealand Dollar
 		log.info("Converting US Dollar to Newzealand Dollar");
-		//convertCurrency.get().convertCurrencyValidation("US","NZ","1");
+		convertCurrency.get().convertCurrencyValidation("US","NZ","1");
 		//Implemented method for Converting Pound Sterling to Newzealand Dollar
 		log.info("Converting Pound Sterling to Newzealand Dollar");
-		//convertCurrency.get().convertCurrencyValidation("PS","NZ","1");
+		convertCurrency.get().convertCurrencyValidation("PS","NZ","1");
 		//Implemented method for Converting  Swiss Franc to Euro
 		log.info("Converting Converting  Swiss Franc to Euro");
-		//convertCurrency.get().convertCurrencyValidation("SF","EU","1");
+		convertCurrency.get().convertCurrencyValidation("SF","EU","1");
 		logger.log(Status.PASS, MarkupHelper.createLabel("ValidatingConversionCurrency is passed", ExtentColor.GREEN));
 		
 	}	
