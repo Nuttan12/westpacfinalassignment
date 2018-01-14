@@ -22,34 +22,10 @@ public class LoadFrameworkProp {
 	private String testDataSheetNo;
 	private String newTransactionPortalUrl;
 	private String newTransactionPortalUrlForInternetExplorer;
-	private String username;
-	private String password;
 	private String configSheetNo;
 	private String testCaseSheetNo;
 	private String testExecutionSheetNo;
-	private String testUserOne;
-	private String testUserTwo;
-	private String testUserThree;
 
-	public String getUserName() {
-		return username;
-	}
-
-	public String getUserNameOne() {
-		return testUserOne;
-	}
-
-	public String getUserNameTwo() {
-		return testUserTwo;
-	}
-
-	public String getUserNameThree() {
-		return testUserThree;
-	}
-
-	public String getPassword() {
-		return password;
-	}
 
 	public String getTestDataSheetNo() {
 		return testDataSheetNo;
@@ -86,7 +62,6 @@ public class LoadFrameworkProp {
 	public String getNewTransactionPortalUrl() {
 		return newTransactionPortalUrl;
 	}
-
 	public String getNewTransactionPortalUrlForInternetExplorer() {
 		return newTransactionPortalUrlForInternetExplorer;
 	}
@@ -126,15 +101,11 @@ public class LoadFrameworkProp {
 			testNgResultsXml = prop.getProperty("TestNgResultsXML");
 			screenshots = prop.getProperty("Screenshots");
 			newTransactionPortalUrl = prop.getProperty("WestPac_Url");
-			//newTransactionPortalUrlForInternetExplorer = prop.getProperty("Syngenta_Url_IE");
-			username = prop.getProperty("Username");
-			password = prop.getProperty("Password");
+			newTransactionPortalUrlForInternetExplorer = prop.getProperty("WestPac_Url");
 			configSheetNo = prop.getProperty("ConfigSheetNo");
 			testCaseSheetNo = prop.getProperty("TestCase");
 			testExecutionSheetNo = prop.getProperty("TestExecutionSheetNo");
-			testUserOne = prop.getProperty("TestUserOne");
-			testUserTwo = prop.getProperty("TestUserTwo");
-			testUserThree = prop.getProperty("TestUserThree");
+
 		} catch (Exception exception) {
 			Reporter.log(ExceptionUtils.getStackTrace(exception));
 		}

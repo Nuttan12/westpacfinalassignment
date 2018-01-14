@@ -21,7 +21,7 @@ import exceptions.ExceptionHandling_ElementNotVisible;
 import exceptions.ExceptionHandling_NoSuchElementException;
 
 /**
- * Author Name : Hema Sai Date of Preparation : 11-09-2016 Purpose of Class :
+ * Author Name : Nuttan Abhijan 
  * Represents the functions which are used to handle various actions performed
  * on the Application under Test
  */
@@ -32,7 +32,7 @@ public class WebElementFactory {
 	protected ScreenShots screenshots;
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 11-09-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : Constructor declaration
 	 */
 	public WebElementFactory(RemoteWebDriver driver) {
@@ -41,7 +41,7 @@ public class WebElementFactory {
 	}
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 11-10-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : Performs operations clear, click, click and hold, double click, context
 	 * click, moves to specific element, releases mouse control
 	 */
@@ -87,7 +87,7 @@ public class WebElementFactory {
 	}
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 11-10-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan 
 	 * : Clears and enters text in input box
 	 */
 	public void enterText(String controlName, String text) {
@@ -105,7 +105,7 @@ public class WebElementFactory {
 	}
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 11-10-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : Select element from the drop down based on the value
 	 */
 	public void selectByValue(String controlName, String optionToBeSelected) {
@@ -115,16 +115,7 @@ public class WebElementFactory {
 	}
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 11-10-2016 Purpose of Method
-	 * : Select element from the drop down based on the value
-	 */
-	public void selectByValue(WebElement element, String optionToBeSelected) {
-		Select select = new Select(element);
-		select.selectByValue(optionToBeSelected);
-	}
-
-	/**
-	 * Author Name : Hema Sai Date of Preparation : 12-10-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan 
 	 * : Select element from the drop down based on the visible text
 	 */
 	public void selectByVisibleText(String controlName, String visibleText) {
@@ -134,7 +125,7 @@ public class WebElementFactory {
 	}
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 12-10-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : Returns the text of the web element
 	 */
 	public String getElementText(String controlName) {
@@ -144,7 +135,7 @@ public class WebElementFactory {
 	}
 
 	/**
-	 * Author Name : Srilatha Date of Preparation : 12-10-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : Gets the locator for identifying the ui elements uniquely
 	 */
 	public By getLocator(String controlProperty, String propertyType) {
@@ -172,7 +163,7 @@ public class WebElementFactory {
 	}
 
 	/**
-	 * Author Name : Srilatha Date of Preparation : 12-10-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : Uses the control name to retrieve and identify the element uniquely
 	 */
 	public WebElement getElement(String controlName) {
@@ -192,7 +183,7 @@ public class WebElementFactory {
 	}
 
 	/**
-	 * Author Name : Srilatha Date of Preparation : 13-10-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : Checks if the elements are not present on the page
 	 */
 	public List<WebElement> getElementNotPresent(String controlName) {
@@ -212,28 +203,7 @@ public class WebElementFactory {
 	}
 
 	/**
-	 * Author Name : Srilatha Date of Preparation : 13-10-2016 Purpose of Method
-	 * : Gets the list of child elements on the page based on the parent element
-	 * 
-	 * @throws NoSuchElementException
-	 */
-	public List<WebElement> getChildElements(WebElement parent, String childControls) {
-		ObjectFactory factory = new ObjectFactory();
-		factory.createObjectMap();
-		ObjectMap<String, UIControlObject> map = factory.getObjectMap();
-		UIControlObject obj = map.get(childControls);
-		By locator = getLocator(obj.getControlProperty(), obj.getTypeOfProperty());
-		List<WebElement> element = parent.findElements(locator);
-		if (element.size() == 0) {
-			screenshots.takeScreenShots();
-			throw new ExceptionHandling_NoSuchElementException(childControls);
-		} else {
-			return element;
-		}
-	}
-
-	/**
-	 * Author Name : Srilatha Date of Preparation : 13-10-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : Gets the list elements on the page based on the specified control name
 	 * 
 	 * @throws NoSuchElementException
@@ -255,7 +225,7 @@ public class WebElementFactory {
 	}
 
 	/**
-	 * Author Name : Suresh Date of Preparation : 11-10-2016 Purpose of Method :
+	 * Author Name : Nuttan Abhijan 
 	 * Checks if the frame is present or not
 	 */
 	public Boolean isFramePresent() {
@@ -267,17 +237,7 @@ public class WebElementFactory {
 	}
 
 	/**
-	 * Author Name : Suresh Date of Preparation : 26-12-2016 Purpose of Method :
-	 * Switches to the active text box and enters text
-	 */
-	public void enterTextOnSelectedTextBox(String controlName, String text) {
-		WebElement element = getElement(controlName);
-		element.click();
-		driver.switchTo().activeElement().sendKeys(text);
-	}
-
-	/**
-	 * Author Name : Suresh Date of Preparation : 11-10-2016 Purpose of Method :
+	 * Author Name : Nuttan Abhijan 
 	 * Finds the child elements based on the xpath property
 	 */
 	public List<WebElement> findElementsByXpath(String elementLocator) {
@@ -286,42 +246,7 @@ public class WebElementFactory {
 	}
 
 	/**
-	 * Author Name : Suresh Date of Preparation : 12-10-2016 Purpose of Method :
-	 * Checks if the parent element contains the child elements
-	 */
-	public List<WebElement> verifyContainsChildElements(WebElement parent, String childControls) {
-		ObjectFactory factory = new ObjectFactory();
-		factory.createObjectMap();
-		ObjectMap<String, UIControlObject> map = factory.getObjectMap();
-		UIControlObject obj = map.get(childControls);
-		By locator = getLocator(obj.getControlProperty(), obj.getTypeOfProperty());
-		List<WebElement> element = parent.findElements(locator);
-		return element;
-	}
-
-	/**
-	 * Author Name : Suresh Date of Preparation : 12-10-2016 Purpose of Method :
-	 * Returns the child element of the specified parent element
-	 * 
-	 * @throws NoSuchElementException
-	 */
-	public WebElement getChildElement(WebElement parent, String childControls) {
-		ObjectFactory factory = new ObjectFactory();
-		factory.createObjectMap();
-		ObjectMap<String, UIControlObject> map = factory.getObjectMap();
-		UIControlObject obj = map.get(childControls);
-		By locator = getLocator(obj.getControlProperty(), obj.getTypeOfProperty());
-		List<WebElement> element = parent.findElements(locator);
-		if (element.size() == 0) {
-			screenshots.takeScreenShots();
-			throw new ExceptionHandling_NoSuchElementException(childControls);
-		} else {
-			return element.get(0);
-		}
-	}
-
-	/**
-	 * Author Name : Suresh Date of Preparation : 12-10-2016 Purpose of Method :
+	 * Author Name : Nuttan Abhijan
 	 * Waits for the specific element to be displayed on the page for the
 	 * specified time interval
 	 * 

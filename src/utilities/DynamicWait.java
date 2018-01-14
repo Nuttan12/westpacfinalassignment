@@ -73,22 +73,6 @@ public class DynamicWait {
 
 	}
 
-	public void waitForFrameToBeAvailableAndSwitchToIt(String controlName) {
-		ObjectFactory factory = new ObjectFactory();
-		factory.createObjectMap();
-		ObjectMap<String, UIControlObject> map = factory.getObjectMap();
-		;
-		UIControlObject obj = map.get(controlName);
-		By by = elementFactory.getLocator(obj.getControlProperty().toString(), obj.getTypeOfProperty());
-		try {
-			new FluentWait<WebDriver>(driver).withTimeout(60, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.MILLISECONDS)
-					.ignoring(NoSuchFrameException.class).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(by));
-		} catch (TimeoutException time) {
-			screenshots.takeScreenShots();
-			Reporter.log("Element " + controlName + "is not found on time " + ExceptionUtils.getStackTrace(time));
-			throw new ExceptionHandling_TimeoutException(controlName);
-		}
-	}
 
 	public void waitForPresenceOfElementLocated(String controlName) {
 
@@ -109,12 +93,6 @@ public class DynamicWait {
 		}
 
 	}
-
-	public void waitForAlertIsPresent() {
-		new FluentWait<WebDriver>(driver).withTimeout(60, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.MILLISECONDS)
-				.ignoring(NoSuchElementException.class).until(ExpectedConditions.alertIsPresent());
-	}
-
 	public void waitForVisibilityOfElementLocated(String controlName) {
 		ObjectFactory factory = new ObjectFactory();
 		factory.createObjectMap();
@@ -130,34 +108,6 @@ public class DynamicWait {
 			throw new ExceptionHandling_TimeoutException(controlName);
 		}
 
-	}
-
-	public void waitUntilAttributeChanges(final WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-
-		wait.until(new ExpectedCondition<Boolean>() {
-			public Boolean apply(WebDriver driver) {
-				String active = element.getAttribute("class");
-				if (active.contains("active"))
-					return true;
-				else
-					return false;
-			}
-		});
-	}
-
-	public void waitForChildWindows() {
-		try {
-			waitTime(5);
-		} catch (Exception exception) {
-			Reporter.log(ExceptionUtils.getStackTrace(exception));
-		}
-	}
-
-	public void waitUntilProgressCompletes(String controlName) {
-		long timeoutInSeconds = 120;
-		new WebDriverWait(driver, timeoutInSeconds)
-				.until(ExpectedConditions.invisibilityOfElementLocated(By.className(controlName)));
 	}
 
 	public void waitTillPageLoads() {
