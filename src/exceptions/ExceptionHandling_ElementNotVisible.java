@@ -7,7 +7,7 @@ import objectRepository.UIControlObject;
 import org.openqa.selenium.ElementNotVisibleException;
 
 /**
- * Author Name : Hema Sai Date of Preparation : 13-09-2016 Purpose of Class :
+ * Author Name : Nuttan Abhijan
  * Represents the way Element Not Visible Exception is handled
  */
 @SuppressWarnings("serial")
@@ -16,7 +16,7 @@ public class ExceptionHandling_ElementNotVisible extends ElementNotVisibleExcept
 	private static String message = null;
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 13-09-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : This method handles ElementNotVisibleException exception and returns a
 	 * customized message
 	 * 
@@ -36,7 +36,7 @@ public class ExceptionHandling_ElementNotVisible extends ElementNotVisibleExcept
 	}
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 13-09-2016 Purpose of Method
+	 * Author Name :Nuttan Abhijan Swain
 	 * : Returns the customized message
 	 */
 	@Override

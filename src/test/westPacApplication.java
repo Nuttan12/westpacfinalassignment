@@ -61,8 +61,7 @@ public class westPacApplication {
 	
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
-	ExtentTest logger1;
-	ExtentTest logger2;
+	ExtentTest logger;
 
 	@Parameters({ "browser" })
 	@BeforeMethod()
@@ -145,7 +144,7 @@ public class westPacApplication {
 	public void logStatus(ITestResult result) throws Exception {
 		try {
 			if (result.getStatus() == ITestResult.FAILURE)
-				logger1.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
+				logger.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));
 				screenshots.get().takeScreenShots(result.getTestName());
 				extent.flush();
 				driver.quit();		
@@ -167,7 +166,7 @@ public class westPacApplication {
 	@Test(priority = 1, description = "Validating Error Message on Currency Converter Page")
 	public void ValidatingErrorMessage() throws Exception {
 		
-		logger1 = extent.createTest("ValidatingErrorMessage");
+		logger= extent.createTest("ValidatingErrorMessage");
 		westpacNZPortal.get().newTransactionPortalLunch();
 		userActions.get().hoverOn("LoginPage_ MenuHover");
 		userActions.get().clickOn("LoginPage_Currencyconverter");
@@ -178,22 +177,22 @@ public class westPacApplication {
         dynamicWait.get().waitForElementToBeClickable("Currencyconverter_ConvertButton");
 		userActions.get().clickOn("Currencyconverter_ConvertButton");
 		assertions.get().stringAssertContains(elementFactory.get().getElementText("Currencyconverter_ErrorMessage"), dataMap.get("ErrorMessage"));
-		logger1.log(Status.PASS, MarkupHelper.createLabel("TValidatingErrorMessage test case is passed", ExtentColor.GREEN));
+		logger.log(Status.PASS, MarkupHelper.createLabel("TValidatingErrorMessage test case is passed", ExtentColor.GREEN));
 	}
 	
 	@Test(priority = 2, description = "Conversion Of Currency")
 	public void ValidatingConversionCurrency() throws Exception {
 		//second commit again hello
-		logger2 = extent.createTest("ValidatingConversionCurrency");
+		logger= extent.createTest("ValidatingConversionCurrency");
 		westpacNZPortal.get().newTransactionPortalLunch();
 		userActions.get().hoverOn("LoginPage_ MenuHover");
 		userActions.get().clickOn("LoginPage_Currencyconverter");
 		dynamicWait.get().waitTime(4);
 		convertCurrency.get().convertCurrencyValidation("NZ","US","1");
-		//convertCurrency.get().convertCurrencyValidation("US","NZ","1");
-		//convertCurrency.get().convertCurrencyValidation("PS","NZ","1");
-		//convertCurrency.get().convertCurrencyValidation("SF","EU","1");
-		logger2.log(Status.PASS, MarkupHelper.createLabel("ValidatingConversionCurrency is passed", ExtentColor.GREEN));
+		convertCurrency.get().convertCurrencyValidation("US","NZ","1");
+		convertCurrency.get().convertCurrencyValidation("PS","NZ","1");
+		convertCurrency.get().convertCurrencyValidation("SF","EU","1");
+		logger.log(Status.PASS, MarkupHelper.createLabel("ValidatingConversionCurrency is passed", ExtentColor.GREEN));
 		
 	}	
 }

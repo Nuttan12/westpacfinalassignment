@@ -7,7 +7,7 @@ import objectRepository.UIControlObject;
 import org.openqa.selenium.NoSuchFrameException;
 
 /**
- * Author Name : Hema Sai Date of Preparation : 15-09-2016 Purpose of Class :
+ * Author Name : Nuttan Abhijan
  * Represents the way No Such Frame Exception is handled
  */
 @SuppressWarnings("serial")
@@ -16,7 +16,7 @@ public class ExceptionHandling_NoSuchFrameException extends NoSuchFrameException
 	private static String message = null;
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 15-09-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : This method handles NoSuchFrameException exception and returns a
 	 * customized message
 	 * 
@@ -36,7 +36,7 @@ public class ExceptionHandling_NoSuchFrameException extends NoSuchFrameException
 	}
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 15-09-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : Returns the customized message
 	 */
 	@Override

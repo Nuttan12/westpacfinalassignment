@@ -3,7 +3,7 @@ package exceptions;
 import org.openqa.selenium.NoSuchWindowException;
 
 /**
- * Author Name : Hema Sai Date of Preparation : 15-09-2016 Purpose of Class :
+ * Author Name : Nuttan Abhijan
  * Represents the way No Such Window Exception is handled
  */
 @SuppressWarnings("serial")
@@ -12,7 +12,7 @@ public class ExceptionHandling_NoSuchWindowException extends NoSuchWindowExcepti
 	private static String message = "NoSuchWindowException :Unable to switch to the Window as no new Window is present";;
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 15-09-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : This method handles NoSuchWindowException exception and returns a
 	 * customized message
 	 * 
@@ -24,7 +24,7 @@ public class ExceptionHandling_NoSuchWindowException extends NoSuchWindowExcepti
 	}
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 15-09-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : Returns the customized message
 	 */
 	@Override

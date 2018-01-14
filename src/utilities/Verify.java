@@ -29,8 +29,8 @@ import utilities.ScreenShots;
 import utilities.WebElementFactory;
 
 /**
- * Author Name : Nuttan Abhijan Represents the functions which are used to
- * handle various verifications performed on the Application under Test
+ * Author Name : Nuttan Abhijan 
+ * Represents the functions which are used to handle various verifications performed on the Application under Test
  */
 public class Verify {
 

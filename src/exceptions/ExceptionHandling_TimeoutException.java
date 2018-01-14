@@ -7,7 +7,7 @@ import objectRepository.UIControlObject;
 import org.openqa.selenium.TimeoutException;
 
 /**
- * Author Name : Hema Sai Date of Preparation : 16-09-2016 Purpose of Class :
+ * Author Name : Nuttan Abhijan
  * Represents the way Timeout Exception is handled
  */
 @SuppressWarnings("serial")
@@ -16,7 +16,7 @@ public class ExceptionHandling_TimeoutException extends TimeoutException {
 	private String message = null;
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 16-09-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : This method handles TimeoutException exception and returns a customized
 	 * message
 	 * 
@@ -36,7 +36,7 @@ public class ExceptionHandling_TimeoutException extends TimeoutException {
 	}
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 16-09-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : Returns the customized message
 	 */
 	@Override

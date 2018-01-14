@@ -7,7 +7,7 @@ import objectRepository.UIControlObject;
 import org.openqa.selenium.NoSuchElementException;
 
 /**
- * Author Name : Hema Sai Date of Preparation : 14-09-2016 Purpose of Class :
+ * Author Name : Nuttan Abhijan
  * Represents the way No Such Element Exception is handled
  */
 @SuppressWarnings("serial")
@@ -16,7 +16,7 @@ public class ExceptionHandling_NoSuchElementException extends NoSuchElementExcep
 	private String message = null;
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 14-09-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : This method handles NoSuchElementException exception and returns a
 	 * customized message
 	 * 
@@ -36,7 +36,7 @@ public class ExceptionHandling_NoSuchElementException extends NoSuchElementExcep
 	}
 
 	/**
-	 * Author Name : Hema Sai Date of Preparation : 14-09-2016 Purpose of Method
+	 * Author Name : Nuttan Abhijan
 	 * : Returns the customized message
 	 */
 	@Override
