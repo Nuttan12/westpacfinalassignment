@@ -101,7 +101,7 @@ public class TestReport {
 				|| Integer.parseInt(result.getpasscount().toString()) > 0) {
 			printWriter.println("<h4><u>TEST EXECUTION DETAILS</u></h4>");
 			printWriter.println(
-					"<TABLE BORDER=1><font face=\"Segoe UI\"><TR><TH>TestName<TH>Test Description<TH>Status<TH>Duration(sec)<TH>ExpectedAccess<TH>ActualAccess<TH></TR></font>");
+					"<TABLE BORDER=1><font face=\"Segoe UI\"><TR><TH>TestName<TH>Test Description<TH>Status<TH>Duration(sec)</TR></font>");
 			// printWriter.println("<TABLE
 			// BORDER=2><TR><TH>Browser</TH><TH>TestName<TH>Test
 			// Description<TH>Status<TH>Error
@@ -114,7 +114,7 @@ public class TestReport {
 					printWriter.println("<TR><TD>" + result.gettestmethodname().get(i) + "<TD>"
 							+ result.getTestMethodDesc().get(i) + "<TD>" + result.getStatus().get(i) + "<TD>"
 							+ Double.parseDouble((String) result.gettestrundduration().get(i)) / 1000 + "<TD>"
-							+ result.getscreenShot().get(i) +"<TD>"+result.getaccess().get(i));
+							);
 				}
 			}
 			printWriter.println("</TABLE></body>");

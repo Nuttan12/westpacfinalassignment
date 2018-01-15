@@ -154,26 +154,26 @@ public class ParsingTestResultXML {
 							lTestName.add(str_testname);
 							lClassName.add(str_classname);
 							
-							if ((eTestMethodElement.getElementsByTagName("line").getLength() > 0)) {
-								int size = eTestMethodElement.getElementsByTagName("line").getLength();
-								boolean imagePresent = false;
-								for (int y = size - 1; size > 0; size--) {
-									if (eTestMethodElement.getElementsByTagName("line").item(size-1).getTextContent()
-											.toString().replaceAll("\\s+","").contains(eTestMethodElement.getAttribute("name"))) {
-										imagePresent = true;
-										lTestmethodname.add(eTestMethodElement.getElementsByTagName("line").item(size-1)
-												.getTextContent().toString());
-										break;
-									}								}
-								if (imagePresent == false) {
-									lTestmethodname.add("Proper Test Folder Structure Not Found");
-								}
-
-							}else {
-								lTestmethodname.add("Proper Test Folder Structure Not Found");
-							}
+//							if ((eTestMethodElement.getElementsByTagName("line").getLength() > 0)) {
+//								int size = eTestMethodElement.getElementsByTagName("line").getLength();
+//								boolean imagePresent = false;
+//								for (int y = size - 1; size > 0; size--) {
+//									if (eTestMethodElement.getElementsByTagName("line").item(size-1).getTextContent()
+//											.toString().replaceAll("\\s+","").contains(eTestMethodElement.getAttribute("name"))) {
+//										imagePresent = true;
+//										lTestmethodname.add(eTestMethodElement.getElementsByTagName("line").item(size-1)
+//												.getTextContent().toString());
+//										break;
+//									}								}
+//								if (imagePresent == false) {
+//									lTestmethodname.add("Proper Test Folder Structure Not Found");
+//								}
+//
+//							}else {
+//								lTestmethodname.add("Proper Test Folder Structure Not Found");
+//							}
 							
-							//lTestmethodname.add(eTestMethodElement.getAttribute("name"));
+							lTestmethodname.add(eTestMethodElement.getAttribute("name"));
 							lStatus.add(eTestMethodElement.getAttribute("status"));
 							ltestduration.add(eTestMethodElement.getAttribute("duration-ms"));
 							if (eTestMethodElement.getAttribute("description").length() > 0) {
@@ -294,28 +294,28 @@ public class ParsingTestResultXML {
 						else if (eTestMethodElement.getAttribute("status").equals("FAIL")) {
 							lTestName.add(str_testname);
 							lClassName.add(str_classname);
-							if ((eTestMethodElement.getElementsByTagName("line").getLength() > 0)) {
-								int size = eTestMethodElement.getElementsByTagName("line").getLength();
-								boolean imagePresent = false;
-								for (int y = size - 1; size > 0; size--) {
-									if ((eTestMethodElement.getElementsByTagName("line").item(size-1).getTextContent()
-											.toString().replaceAll("\\s+","").contains(eTestMethodElement.getAttribute("name")) ) && (!(eTestMethodElement.getElementsByTagName("line").item(size-1).getTextContent()
-													.toString().contains(".png")))&& (!(eTestMethodElement.getElementsByTagName("line").item(size-1).getTextContent()
-															.toString().contains("java")))) {
-					
-										imagePresent = true;
-										lTestmethodname.add(eTestMethodElement.getElementsByTagName("line").item(size-1)
-												.getTextContent().toString());
-										break;
-									}								}
-								if (imagePresent == false) {
-									lTestmethodname.add("Proper Test Folder Structure Found");
-								}
-
-							}else {
-								lTestmethodname.add("Proper Test Folder Structure Not Found");
-							}
-							//lTestmethodname.add(eTestMethodElement.getAttribute("name"));
+//							if ((eTestMethodElement.getElementsByTagName("line").getLength() > 0)) {
+//								int size = eTestMethodElement.getElementsByTagName("line").getLength();
+//								boolean imagePresent = false;
+//								for (int y = size - 1; size > 0; size--) {
+//									if ((eTestMethodElement.getElementsByTagName("line").item(size-1).getTextContent()
+//											.toString().replaceAll("\\s+","").contains(eTestMethodElement.getAttribute("name")) ) && (!(eTestMethodElement.getElementsByTagName("line").item(size-1).getTextContent()
+//													.toString().contains(".png")))&& (!(eTestMethodElement.getElementsByTagName("line").item(size-1).getTextContent()
+//															.toString().contains("java")))) {
+//					
+//										imagePresent = true;
+//										lTestmethodname.add(eTestMethodElement.getElementsByTagName("line").item(size-1)
+//												.getTextContent().toString());
+//										break;
+//									}								}
+//								if (imagePresent == false) {
+//									lTestmethodname.add("Proper Test Folder Structure Found");
+//								}
+//
+//							}else {
+//								lTestmethodname.add("Proper Test Folder Structure Not Found");
+//							}
+							lTestmethodname.add(eTestMethodElement.getAttribute("name"));
 							ltestduration.add(eTestMethodElement.getAttribute("duration-ms"));
 							if (eTestMethodElement.getAttribute("description").length() > 0) {
 								lTestmethoddescription.add(eTestMethodElement.getAttribute("description"));

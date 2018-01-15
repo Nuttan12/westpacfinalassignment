@@ -59,18 +59,6 @@ public class ConvertCurrency {
 		assertions = new Assertions(driver);
 		wait = new WebDriverWait(driver, 30);
 	}
-
-	public String getPrivilaege(String RowValue) {
-		try {
-			excelUtilis.setExcelFile("D:\\Nuttan_Eclipse\\Syngenta_Report\\Excels\\Book2.xls", "TestData");
-			CellData = excelUtilis.getExactCellData(RowValue);
-			System.out.println(CellData);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return CellData;
-	}
 	
 	/**
 	  Author Name                       : Nuttan Abhijan Swain
@@ -103,7 +91,8 @@ public class ConvertCurrency {
 		Log.info("Clicking on Convert Button");
 		userActions.clickOn("Currencyconverter_ConvertButton");
 		dynamicWait.waitTime(4);
-		System.out.println(val+" "+dataMap.get(fromCurrency));
+		//System.out.println(val+" "+dataMap.get(fromCurrency));
+		Log.info("Validating currency conversion result");
 		if (assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"), val+" "+dataMap.get(fromCurrency)) &&
 				assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"), dataMap.get(ToCurrency)) &&	
 				assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"),"Rates updated"))

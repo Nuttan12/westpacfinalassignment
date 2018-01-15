@@ -9,7 +9,7 @@
 		<classes>
 			<class name="test.westPacApplication">
 				<methods>
-					<exclude name="ValidatingErrorMessage" />
+					<include name="ValidatingErrorMessage" />
 					<include name="ValidatingConversionCurrency" />
 				</methods>
 			</class>

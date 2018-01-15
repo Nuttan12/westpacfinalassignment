@@ -207,6 +207,8 @@ public class westPacApplication {
 		log.info("Waiting for the page to load completely");
 		dynamicWait.get().waitTillPageLoads();
 		dynamicWait.get().waitTime(10);
+		log.info("Verifying Navigation sucessfully or not");
+		verify.get().verifyPageTitle("PageTitle");
 		//Switching to iframe present in the transaction page
 		log.info("Switching to iframe");
 		driver.switchTo().frame("westpac-iframe");
@@ -250,6 +252,8 @@ public class westPacApplication {
 		userActions.get().clickOn("LoginPage_Currencyconverter");
 		//Waiting till the page completely loads
 		dynamicWait.get().waitTime(4);
+		log.info("Verifying Navigation sucessfully or not");
+		verify.get().verifyPageTitle("PageTitle");
 		//Implemented method for Converting Newzealand Dollar to US Dollar
 		log.info("Converting Newzealand Dollar to US Dollar");
 		convertCurrency.get().convertCurrencyValidation("NZ","US","1");
