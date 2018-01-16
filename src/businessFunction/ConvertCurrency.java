@@ -22,7 +22,6 @@ import utilities.ScreenShots;
 import utilities.UserActions;
 import utilities.Verify;
 import utilities.WebElementFactory;
-import utilities.excelUtilis;
 import utilities.Log;
 
 public class ConvertCurrency {
@@ -77,27 +76,22 @@ public class ConvertCurrency {
 		
 
 		dynamicWait.waitTillPageLoads();
-		Log.info("Switching to IFrame");
 		driver.switchTo().frame("westpac-iframe");
 		WebDriverWait wait = new WebDriverWait(driver,10);
 		Select convertFrom = new Select(wait.until(ExpectedConditions.elementToBeClickable(By.id("ConvertFrom"))));
 		Select convertTo = new Select(wait.until(ExpectedConditions.elementToBeClickable(By.id("ConvertTo"))));
-		Log.info("Selecting currency from ConvertFrom Dropdown");
 		convertFrom.selectByVisibleText(dataMap.get(fromCurrency));
 		Log.info("Entering amount to be converted");
 		elementFactory.getElement("Currencyconverter_InputAmount").sendKeys(val);
-		Log.info("Selecting currency from ConvertTo Dropdown");
 		convertTo.selectByVisibleText(dataMap.get(ToCurrency));
 		Log.info("Clicking on Convert Button");
 		userActions.clickOn("Currencyconverter_ConvertButton");
 		dynamicWait.waitTime(4);
 		//System.out.println(val+" "+dataMap.get(fromCurrency));
-		Log.info("Validating currency conversion result");
 		if (assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"), val+" "+dataMap.get(fromCurrency)) &&
 				assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"), dataMap.get(ToCurrency)) &&	
 				assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"),"Rates updated"))
-		{
-	    Log.info("Switching to default content");		
+		{	
 		driver.switchTo().defaultContent();
 		Log.info("Refreshing the webpage");
 		driver.navigate().refresh();

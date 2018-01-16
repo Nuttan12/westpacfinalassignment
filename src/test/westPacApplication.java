@@ -42,6 +42,7 @@ import utilities.ScreenShots;
 import utilities.UserActions;
 import utilities.Verify;
 import utilities.WebElementFactory;
+import utilities.excelUtilis;
 import businessFunction.WestpacNZPortal;
 import businessFunction.ConvertCurrency;
 
@@ -59,6 +60,7 @@ public class westPacApplication {
 	protected InheritableThreadLocal<ScreenShots> screenshots = new InheritableThreadLocal<ScreenShots>();
 	protected InheritableThreadLocal<WestpacNZPortal> westpacNZPortal = new InheritableThreadLocal<WestpacNZPortal>();
 	protected InheritableThreadLocal<ConvertCurrency> convertCurrency = new InheritableThreadLocal<ConvertCurrency>();
+	protected InheritableThreadLocal<excelUtilis> excelUtil = new InheritableThreadLocal<excelUtilis>();
 
 	protected static TestDataMap<String, String> dataMap;
 	protected TestDataFactory dataFactory;
@@ -78,14 +80,18 @@ public class westPacApplication {
 		try {
 			caps = new DesiredCapabilities();
 			if (browserName.equalsIgnoreCase("iexplorer")) {
-				File file = new File("D:\\Nuttan_WestpacAssignment\\westpacAssignment\\drivers\\IEDriverServer.exe");
+				File file = new File(".\\drivers\\IEDriverServer.exe");
+				String path =file.getAbsolutePath();
+				//File file = new File("D:\\Nuttan_WestpacAssignment\\westpacAssignment\\drivers\\IEDriverServer.exe");
+				//System.out.println(path);
 				caps = DesiredCapabilities.internetExplorer();
 				caps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 				caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 				caps.setCapability(InternetExplorerDriver.ENABLE_ELEMENT_CACHE_CLEANUP, true);
 				caps.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
 				caps.setCapability(InternetExplorerDriver.INITIAL_BROWSER_URL, "http://www.westpac.co.nz/");
-				System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+				//System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+				System.setProperty("webdriver.ie.driver", path);
 				driver = new InternetExplorerDriver(caps);
 			} else if (browserName.equalsIgnoreCase("firefox")) {
 				File pathToBinary = new File("C:\\Users\\" + System.getProperty("user.name")
@@ -95,7 +101,7 @@ public class westPacApplication {
 				driver = new FirefoxDriver(ffBinary, firefoxProfile);
 
 			} else if (browserName.equalsIgnoreCase("Chrome")) {
-				File file = new File("D:\\Nuttan_WestpacAssignment\\westpacAssignment\\drivers\\chromedriver.exe");
+				File file = new File(".\\drivers\\chromedriver.exe");
 				System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 				caps = DesiredCapabilities.chrome();
 				ChromeOptions options = new ChromeOptions();
@@ -139,6 +145,10 @@ public class westPacApplication {
 			htmlReporter.config().setTheme(Theme.STANDARD);
 			
 			PropertyConfigurator.configure("log4j.properties");
+			
+			File file = new File(".\\Excels\\ObjectRepository.xls");
+			String path =file.getAbsolutePath();
+			excelUtilis.setExcelFile(path, "TestData");
 			
 
 		} catch (Exception exception) {
@@ -198,22 +208,17 @@ public class westPacApplication {
 		log.info("Launching WestpacNewzealand Transaction Portal");
 		westpacNZPortal.get().newTransactionPortalLunch();
 		//To hover on FX,Travel and Migrant tab.
-		log.info("Hovering on FX,Travel and Migrant tab");
 		userActions.get().hoverOn("LoginPage_ MenuHover");
 		//To click on Currency Converter option
 		log.info("Clicking on Currency converter option");
 		userActions.get().clickOn("LoginPage_Currencyconverter");
 		//Waiting till the page completely loads
-		log.info("Waiting for the page to load completely");
 		dynamicWait.get().waitTillPageLoads();
 		dynamicWait.get().waitTime(10);
-		log.info("Verifying Navigation sucessfully or not");
 		verify.get().verifyPageTitle("PageTitle");
 		//Switching to iframe present in the transaction page
-		log.info("Switching to iframe");
 		driver.switchTo().frame("westpac-iframe");
 		//To clear the input amount text box
-		log.info("clearing the input amount text box");
 		elementFactory.get().getElement("Currencyconverter_InputAmount").clear();
 		//Waiting period for the currency converter button to be clickable
         dynamicWait.get().waitForElementToBeClickable("Currencyconverter_ConvertButton");
@@ -245,27 +250,33 @@ public class westPacApplication {
 		log.info("Launching WestpacNewzealand Transaction Portal");
 		westpacNZPortal.get().newTransactionPortalLunch();
 		//To hover on FX,Travel and Migrant tab.
-		log.info("Hovering on FX,Travel and Migrant tab");
 		userActions.get().hoverOn("LoginPage_ MenuHover");
 		//To click on Currency Converter option
 		log.info("Clicking on Currency converter option");
 		userActions.get().clickOn("LoginPage_Currencyconverter");
 		//Waiting till the page completely loads
 		dynamicWait.get().waitTime(4);
-		log.info("Verifying Navigation sucessfully or not");
 		verify.get().verifyPageTitle("PageTitle");
 		//Implemented method for Converting Newzealand Dollar to US Dollar
 		log.info("Converting Newzealand Dollar to US Dollar");
-		convertCurrency.get().convertCurrencyValidation("NZ","US","1");
+		excelUtil.get();
+		excelUtil.get();
+		convertCurrency.get().convertCurrencyValidation(excelUtilis.getCellData(3, 0),excelUtilis.getCellData(2, 0),"1");
 		//Implemented method for Converting US Dollar to Newzealand Dollar
 		log.info("Converting US Dollar to Newzealand Dollar");
-		convertCurrency.get().convertCurrencyValidation("US","NZ","1");
+		excelUtil.get();
+		excelUtil.get();
+		convertCurrency.get().convertCurrencyValidation(excelUtilis.getCellData(2, 0),excelUtilis.getCellData(3, 0),"1");
 		//Implemented method for Converting Pound Sterling to Newzealand Dollar
 		log.info("Converting Pound Sterling to Newzealand Dollar");
-		convertCurrency.get().convertCurrencyValidation("PS","NZ","1");
+		excelUtil.get();
+		excelUtil.get();
+		convertCurrency.get().convertCurrencyValidation(excelUtilis.getCellData(4, 0),excelUtilis.getCellData(3, 0),"1");
 		//Implemented method for Converting  Swiss Franc to Euro
 		log.info("Converting Converting  Swiss Franc to Euro");
-		convertCurrency.get().convertCurrencyValidation("SF","EU","1");
+		excelUtil.get();
+		excelUtil.get();
+		convertCurrency.get().convertCurrencyValidation(excelUtilis.getCellData(5, 0),excelUtilis.getCellData(6, 0),"1");
 		logger.log(Status.PASS, MarkupHelper.createLabel("ValidatingConversionCurrency is passed", ExtentColor.GREEN));
 		
 	}	

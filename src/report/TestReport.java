@@ -1,18 +1,12 @@
 package report;
 
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.xml.parsers.ParserConfigurationException;
-
 import org.testng.annotations.Test;
-import org.xml.sax.SAXException;
-
 import properties.LoadFrameworkProp;
-import businessFunction.ConvertCurrency;
 import utilities.excelUtilis;
 
 /**

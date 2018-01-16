@@ -3,14 +3,6 @@
  */
 package utilities;
 
-import java.io.File;
-import java.io.FileReader;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -20,8 +12,6 @@ import objectRepository.UIControlObject;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -31,7 +21,6 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import exceptions.ExceptionHandling_InvalidElementStateException;
-import exceptions.ExceptionHandling_NoSuchWindowException;
 import testData.TestDataFactory;
 import testData.TestDataMap;
 import utilities.DynamicWait;

@@ -10,16 +10,12 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 import exceptions.ExceptionHandling_TimeoutException;
@@ -116,6 +112,7 @@ public class DynamicWait {
 				new FluentWait<WebDriver>(driver).withTimeout(300, TimeUnit.SECONDS)
 						.pollingEvery(5, TimeUnit.MILLISECONDS)
 						.until(new com.google.common.base.Function<WebDriver, Boolean>() {
+							@Override
 							public Boolean apply(WebDriver driver) {
 								return ((JavascriptExecutor) driver).executeScript("return document.readyState")
 										.equals("complete");

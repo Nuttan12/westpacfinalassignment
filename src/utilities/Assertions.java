@@ -1,7 +1,5 @@
 package utilities;
 
-import java.io.File;
-
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
