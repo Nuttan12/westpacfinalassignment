@@ -14,10 +14,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Reporter;
 
-import exceptions.ExceptionHandling_ElementNotVisible;
+
 import exceptions.ExceptionHandling_NoSuchElementException;
 
 /**

@@ -3,21 +3,14 @@
  */
 package utilities;
 
-import java.util.List;
 import java.util.Set;
 
 import objectRepository.ObjectFactory;
 import objectRepository.UIControlObject;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 import org.testng.Reporter;
 
 import exceptions.ExceptionHandling_InvalidElementStateException;
@@ -31,9 +24,7 @@ public class UserActions {
 	protected WebElementFactory elementFactory;
 	private String parentWindow = null;
 	protected DynamicWait dynamicWait;
-	private Alert alert = null;
 	private RemoteWebDriver driver;
-	private int timer = 1;
 	public TestDataMap<String, String> dataMap;
 	protected ScreenShots screenshots;
 

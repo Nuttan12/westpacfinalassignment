@@ -1,7 +1,6 @@
 package utilities;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;

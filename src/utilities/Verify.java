@@ -30,7 +30,6 @@ public class Verify {
 	private WebElementFactory elementFactory;
 	private UserActions userActions;
 	private ScreenShots screenshots = null;
-	private Alert alert = null;
 	private TestDataMap<String, String> dataMap;
 	protected TestDataFactory dataFactory;
 	protected RemoteWebDriver driver;
