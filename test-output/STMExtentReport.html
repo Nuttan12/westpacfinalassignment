@@ -44,7 +44,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Jan 16, 2018 07:02:34 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Jan 16, 2018 11:25:11 PM</span>
 				</a>
 			</li>
 			<li>
@@ -120,10 +120,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='85.714%'><span class='strong'>12</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='72.222%'><span class='strong'>13</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='14.286%'>2</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='27.778%'>5</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -135,10 +135,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='85.714%'><span class='strong'>12</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='72.222%'><span class='strong'>13</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='14.286%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='27.778%'>5</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -153,17 +153,54 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>ValidatingErrorMessage</span>
-						<span class='test-time'>Jan 15, 2018 12:32:43 PM</span>
+						<span class='test-time'>Jan 16, 2018 09:30:53 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 09:30:53 PM</span>
+	<span class='label end-time'>Jan 16, 2018 09:31:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>9:31:18 PM</td>
+					<td class='step-details'><span class="label white-text green">ValidatingErrorMessage test case is passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='screenshot.png' width='10%' src='screenshot.png' data-src='screenshot.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingConversionCurrency</span>
+						<span class='test-time'>Jan 16, 2018 09:31:34 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jan 15, 2018 12:32:43 PM</span>
-	<span class='label end-time'>Jan 15, 2018 12:34:01 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 18s+0ms</span>
+	<span class='label start-time'>Jan 16, 2018 09:31:34 PM</span>
+	<span class='label end-time'>Jan 16, 2018 09:31:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+0ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -177,8 +214,8 @@
 			<tbody>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>12:34:01 PM</td>
-					<td class='step-details'><span class="label white-text red">ValidatingErrorMessage - Test Case Failed</span></td>
+					<td class='timestamp'>9:31:50 PM</td>
+					<td class='step-details'><span class="label white-text red">ValidatingConversionCurrency - Test Case Failed</span></td>
 				</tr>
 			</tbody>
 		</table>
@@ -187,17 +224,153 @@
 				</li>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>ValidatingConversionCurrency</span>
-						<span class='test-time'>Jan 15, 2018 12:34:13 PM</span>
+						<span class='test-time'>Jan 16, 2018 09:36:03 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 09:36:03 PM</span>
+	<span class='label end-time'>Jan 16, 2018 09:36:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>9:36:20 PM</td>
+					<td class='step-details'><span class="label white-text red">ValidatingConversionCurrency - Test Case Failed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingConversionCurrency</span>
+						<span class='test-time'>Jan 16, 2018 09:38:52 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 09:38:52 PM</span>
+	<span class='label end-time'>Jan 16, 2018 09:39:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>9:39:10 PM</td>
+					<td class='step-details'><span class="label white-text red">ValidatingConversionCurrency - Test Case Failed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingConversionCurrency</span>
+						<span class='test-time'>Jan 16, 2018 09:41:55 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 09:41:55 PM</span>
+	<span class='label end-time'>Jan 16, 2018 09:42:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>9:42:10 PM</td>
+					<td class='step-details'><span class="label white-text red">ValidatingConversionCurrency - Test Case Failed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingConversionCurrency</span>
+						<span class='test-time'>Jan 16, 2018 09:43:49 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 09:43:49 PM</span>
+	<span class='label end-time'>Jan 16, 2018 09:44:04 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>9:44:04 PM</td>
+					<td class='step-details'><span class="label white-text red">ValidatingConversionCurrency - Test Case Failed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingConversionCurrency</span>
+						<span class='test-time'>Jan 16, 2018 09:47:52 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jan 15, 2018 12:34:13 PM</span>
-	<span class='label end-time'>Jan 15, 2018 12:35:45 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 32s+0ms</span>
+	<span class='label start-time'>Jan 16, 2018 09:47:52 PM</span>
+	<span class='label end-time'>Jan 16, 2018 09:49:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 3s+0ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -211,7 +384,291 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>12:35:45 PM</td>
+					<td class='timestamp'>9:49:55 PM</td>
+					<td class='step-details'><span class="label white-text green">ValidatingConversionCurrency is passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingConversionCurrency</span>
+						<span class='test-time'>Jan 16, 2018 10:34:06 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 10:34:06 PM</span>
+	<span class='label end-time'>Jan 16, 2018 10:35:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 29s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:35:35 PM</td>
+					<td class='step-details'><span class="label white-text green">ValidatingConversionCurrency is passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingErrorMessage</span>
+						<span class='test-time'>Jan 16, 2018 10:48:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 10:48:04 PM</span>
+	<span class='label end-time'>Jan 16, 2018 10:48:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:48:31 PM</td>
+					<td class='step-details'><span class="label white-text green">ValidatingErrorMessage test case is passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='screenshot.png' width='10%' src='screenshot.png' data-src='screenshot.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingConversionCurrency</span>
+						<span class='test-time'>Jan 16, 2018 10:48:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 10:48:47 PM</span>
+	<span class='label end-time'>Jan 16, 2018 10:49:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 51s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:49:38 PM</td>
+					<td class='step-details'><span class="label white-text green">ValidatingConversionCurrency is passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingErrorMessage</span>
+						<span class='test-time'>Jan 16, 2018 10:55:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 10:55:16 PM</span>
+	<span class='label end-time'>Jan 16, 2018 10:55:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:55:38 PM</td>
+					<td class='step-details'><span class="label white-text green">ValidatingErrorMessage test case is passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='screenshot.png' width='10%' src='screenshot.png' data-src='screenshot.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingErrorMessage</span>
+						<span class='test-time'>Jan 16, 2018 11:00:58 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 11:00:58 PM</span>
+	<span class='label end-time'>Jan 16, 2018 11:01:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 32s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:01:30 PM</td>
+					<td class='step-details'><span class="label white-text green">ValidatingErrorMessage test case is passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='screenshot.png' width='10%' src='screenshot.png' data-src='screenshot.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingConversionCurrency</span>
+						<span class='test-time'>Jan 16, 2018 11:01:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 11:01:46 PM</span>
+	<span class='label end-time'>Jan 16, 2018 11:02:29 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 43s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:02:29 PM</td>
+					<td class='step-details'><span class="label white-text green">ValidatingConversionCurrency is passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingErrorMessage</span>
+						<span class='test-time'>Jan 16, 2018 11:06:24 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 11:06:24 PM</span>
+	<span class='label end-time'>Jan 16, 2018 11:06:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:47 PM</td>
+					<td class='step-details'><span class="label white-text green">ValidatingErrorMessage test case is passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='screenshot.png' width='10%' src='screenshot.png' data-src='screenshot.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatingConversionCurrency</span>
+						<span class='test-time'>Jan 16, 2018 11:07:02 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 16, 2018 11:07:02 PM</span>
+	<span class='label end-time'>Jan 16, 2018 11:08:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 0s+0ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:08:02 PM</td>
 					<td class='step-details'><span class="label white-text green">ValidatingConversionCurrency is passed</span></td>
 				</tr>
 			</tbody>
@@ -224,14 +681,14 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
 					<div class='test-heading'>
 						<span class='test-name'>ValidatingErrorMessage</span>
-						<span class='test-time'>Jan 15, 2018 10:23:27 PM</span>
+						<span class='test-time'>Jan 16, 2018 11:12:06 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jan 15, 2018 10:23:27 PM</span>
-	<span class='label end-time'>Jan 15, 2018 10:24:02 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+0ms</span>
+	<span class='label start-time'>Jan 16, 2018 11:12:06 PM</span>
+	<span class='label end-time'>Jan 16, 2018 11:12:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+0ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -245,7 +702,7 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:24:02 PM</td>
+					<td class='timestamp'>11:12:30 PM</td>
 					<td class='step-details'><span class="label white-text green">ValidatingErrorMessage test case is passed</span></td>
 				</tr>
 			</tbody>
@@ -261,14 +718,14 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
 					<div class='test-heading'>
 						<span class='test-name'>ValidatingConversionCurrency</span>
-						<span class='test-time'>Jan 15, 2018 10:24:16 PM</span>
+						<span class='test-time'>Jan 16, 2018 11:12:46 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jan 15, 2018 10:24:16 PM</span>
-	<span class='label end-time'>Jan 15, 2018 10:25:55 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 39s+0ms</span>
+	<span class='label start-time'>Jan 16, 2018 11:12:46 PM</span>
+	<span class='label end-time'>Jan 16, 2018 11:13:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 46s+0ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -282,7 +739,7 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:25:55 PM</td>
+					<td class='timestamp'>11:13:32 PM</td>
 					<td class='step-details'><span class="label white-text green">ValidatingConversionCurrency is passed</span></td>
 				</tr>
 			</tbody>
@@ -294,52 +751,15 @@
 				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
 					<div class='test-heading'>
-						<span class='test-name'>ValidatingErrorMessage</span>
-						<span class='test-time'>Jan 16, 2018 05:09:21 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Jan 16, 2018 05:09:21 PM</span>
-	<span class='label end-time'>Jan 16, 2018 05:09:43 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+0ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>5:09:43 PM</td>
-					<td class='step-details'><span class="label white-text green">ValidatingErrorMessage test case is passed</span></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-							<ul class='screenshots'>
-								<li><img data-featherlight='screenshot.png' width='10%' src='screenshot.png' data-src='screenshot.png'></li>
-							</ul>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
-					<div class='test-heading'>
 						<span class='test-name'>ValidatingConversionCurrency</span>
-						<span class='test-time'>Jan 16, 2018 05:10:00 PM</span>
+						<span class='test-time'>Jan 16, 2018 11:25:11 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Jan 16, 2018 05:10:00 PM</span>
-	<span class='label end-time'>Jan 16, 2018 05:11:35 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 35s+0ms</span>
+	<span class='label start-time'>Jan 16, 2018 11:25:11 PM</span>
+	<span class='label end-time'>Jan 16, 2018 11:25:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 45s+849ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -353,294 +773,7 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>5:11:35 PM</td>
-					<td class='step-details'><span class="label white-text green">ValidatingConversionCurrency is passed</span></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='20'>
-					<div class='test-heading'>
-						<span class='test-name'>ValidatingErrorMessage</span>
-						<span class='test-time'>Jan 16, 2018 05:49:59 PM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Jan 16, 2018 05:49:59 PM</span>
-	<span class='label end-time'>Jan 16, 2018 05:50:17 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+0ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='fail'>
-					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>5:50:17 PM</td>
-					<td class='step-details'><span class="label white-text red">ValidatingErrorMessage - Test Case Failed</span></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
-					<div class='test-heading'>
-						<span class='test-name'>ValidatingErrorMessage</span>
-						<span class='test-time'>Jan 16, 2018 05:52:56 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Jan 16, 2018 05:52:56 PM</span>
-	<span class='label end-time'>Jan 16, 2018 05:53:15 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+0ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>5:53:15 PM</td>
-					<td class='step-details'><span class="label white-text green">ValidatingErrorMessage test case is passed</span></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-							<ul class='screenshots'>
-								<li><img data-featherlight='screenshot.png' width='10%' src='screenshot.png' data-src='screenshot.png'></li>
-							</ul>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
-					<div class='test-heading'>
-						<span class='test-name'>ValidatingErrorMessage</span>
-						<span class='test-time'>Jan 16, 2018 06:04:33 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Jan 16, 2018 06:04:33 PM</span>
-	<span class='label end-time'>Jan 16, 2018 06:04:53 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+0ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:04:53 PM</td>
-					<td class='step-details'><span class="label white-text green">ValidatingErrorMessage test case is passed</span></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-							<ul class='screenshots'>
-								<li><img data-featherlight='screenshot.png' width='10%' src='screenshot.png' data-src='screenshot.png'></li>
-							</ul>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
-					<div class='test-heading'>
-						<span class='test-name'>ValidatingErrorMessage</span>
-						<span class='test-time'>Jan 16, 2018 06:07:14 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Jan 16, 2018 06:07:14 PM</span>
-	<span class='label end-time'>Jan 16, 2018 06:07:34 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+0ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:07:34 PM</td>
-					<td class='step-details'><span class="label white-text green">ValidatingErrorMessage test case is passed</span></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-							<ul class='screenshots'>
-								<li><img data-featherlight='screenshot.png' width='10%' src='screenshot.png' data-src='screenshot.png'></li>
-							</ul>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
-					<div class='test-heading'>
-						<span class='test-name'>ValidatingErrorMessage</span>
-						<span class='test-time'>Jan 16, 2018 06:11:02 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Jan 16, 2018 06:11:02 PM</span>
-	<span class='label end-time'>Jan 16, 2018 06:11:21 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+0ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:11:21 PM</td>
-					<td class='step-details'><span class="label white-text green">ValidatingErrorMessage test case is passed</span></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-							<ul class='screenshots'>
-								<li><img data-featherlight='screenshot.png' width='10%' src='screenshot.png' data-src='screenshot.png'></li>
-							</ul>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
-					<div class='test-heading'>
-						<span class='test-name'>ValidatingConversionCurrency</span>
-						<span class='test-time'>Jan 16, 2018 06:33:56 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Jan 16, 2018 06:33:56 PM</span>
-	<span class='label end-time'>Jan 16, 2018 06:35:26 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 30s+0ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>6:35:26 PM</td>
-					<td class='step-details'><span class="label white-text green">ValidatingConversionCurrency is passed</span></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
-					<div class='test-heading'>
-						<span class='test-name'>ValidatingErrorMessage</span>
-						<span class='test-time'>Jan 16, 2018 07:02:02 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Jan 16, 2018 07:02:02 PM</span>
-	<span class='label end-time'>Jan 16, 2018 07:02:21 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+0ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:02:21 PM</td>
-					<td class='step-details'><span class="label white-text green">ValidatingErrorMessage test case is passed</span></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-							<ul class='screenshots'>
-								<li><img data-featherlight='screenshot.png' width='10%' src='screenshot.png' data-src='screenshot.png'></li>
-							</ul>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='27'>
-					<div class='test-heading'>
-						<span class='test-name'>ValidatingConversionCurrency</span>
-						<span class='test-time'>Jan 16, 2018 07:02:34 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Jan 16, 2018 07:02:34 PM</span>
-	<span class='label end-time'>Jan 16, 2018 07:04:11 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 36s+762ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:04:11 PM</td>
+					<td class='timestamp'>11:25:57 PM</td>
 					<td class='step-details'><span class='label white-text green'>ValidatingConversionCurrency is passed</span></td>
 				</tr>
 			</tbody>
@@ -683,31 +816,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>14</div>
+					<div class='panel-lead'>18</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>14</div>
+					<div class='panel-lead'>18</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 16, 2018 07:02:34 PM</div>
+					<div class='panel-lead'>Jan 16, 2018 11:25:11 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 16, 2018 07:04:12 PM</div>
+			 		<div class='panel-lead'>Jan 16, 2018 11:25:58 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>97,148ms</div>
+					<div class='panel-lead'>46,695ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -740,22 +873,22 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 12,
-				failParent: 2,
+				passParent: 13,
+				failParent: 5,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 2,
+				exceptionsParent: 5,
 				
-				passChild: 12,
-				failChild: 2,
+				passChild: 13,
+				failChild: 5,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 2,
+				exceptionsChild: 5,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,
