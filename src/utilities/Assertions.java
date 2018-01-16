@@ -44,24 +44,6 @@ public class Assertions {
 
 	/**
 	 * 
-	 * : Checks whether the actual string is not expected string
-	 */
-	public boolean stringAssertNotEquals(String str_actual, String str_expected) {
-		try {
-			Assert.assertFalse(str_actual.trim().equalsIgnoreCase(str_expected));
-			return true;
-		} catch (AssertionError exception) {
-			screenshots.takeScreenShots();
-			Reporter.log("Test failed since Expected value is equal to actual.Expected value:" + str_expected
-					+ " Actual value:" + str_actual + ExceptionUtils.getStackTrace(exception));
-			Assert.fail("Test failed since Expected value is equal to actual.Expected value:" + str_expected
-					+ " Actual value:" + str_actual);
-		}
-		return false;
-	}
-
-	/**
-	 * 
 	 * : Checks whether the expected string contains actual string
 	 * 
 	 * @throws AssertionError
@@ -78,38 +60,4 @@ public class Assertions {
 			return false;
 		}
 	}
-
-	/**
-	 * 
-	 * : Checks whether the actual string contains expected string
-	 * 
-	 * @throws AssertionError
-	 */
-	public boolean stringAssertContainsExpected(String str_actual, String str_expected) {
-		if (str_expected.contains(str_actual)) {
-			return true;
-		} else {
-			screenshots.takeScreenShots();
-			Reporter.log("Test failed as actual value does not contain expected value. Expected value:" + str_expected
-					+ " Actual value:" + str_actual);
-			Assert.fail("Test Failed since actual value does not contain expected. Expected value:" + str_expected
-					+ " Actual value:" + str_actual);
-			return false;
-		}
-	}
-
-	/**
-	 * : Checks whether the actual value is not null
-	 */
-	public void assertNotNull(WebElement element) {
-		try {
-			Assert.assertNotEquals(element.getText(), "");
-		} catch (AssertionError exception) {
-			screenshots.takeScreenShots();
-			Reporter.log("Test failed since the element " + element + " does not contain any value "
-					+ ExceptionUtils.getStackTrace(exception));
-			Assert.fail("Test Failed since the Element " + element + " does not contain any value");
-		}
-	}
-
 }

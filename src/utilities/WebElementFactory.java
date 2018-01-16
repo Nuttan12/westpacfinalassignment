@@ -61,23 +61,8 @@ public class WebElementFactory {
 			action = actions.build();
 			action.perform();
 			break;
-		case "doubleclick":
-			actions.doubleClick(element);
-			action = actions.build();
-			action.perform();
-			break;
-		case "contextclick":
-			actions.contextClick(element);
-			action = actions.build();
-			action.perform();
-			break;
 		case "hover":
 			actions.moveToElement(element);
-			action = actions.build();
-			action.perform();
-			break;
-		case "release":
-			actions.release(element);
 			action = actions.build();
 			action.perform();
 			break;
@@ -85,45 +70,6 @@ public class WebElementFactory {
 			break;
 		}
 	}
-
-	/**
-	 * Author Name : Nuttan Abhijan 
-	 * : Clears and enters text in input box
-	 */
-	public void enterText(String controlName, String text) {
-		Actions actions = new Actions(driver);
-		WebElement element = getElement(controlName);
-		try {
-			element.clear();
-			actions.sendKeys(element, text).perform();
-		} catch (Exception exception) {
-			screenshots.takeScreenShots();
-			Reporter.log("Element is not currently visible and so may not be interacted with "
-					+ ExceptionUtils.getStackTrace(exception));
-			throw new ExceptionHandling_ElementNotVisible(controlName);
-		}
-	}
-
-	/**
-	 * Author Name : Nuttan Abhijan
-	 * : Select element from the drop down based on the value
-	 */
-	public void selectByValue(String controlName, String optionToBeSelected) {
-		WebElement element = getElement(controlName);
-		Select select = new Select(element);
-		select.selectByValue(optionToBeSelected);
-	}
-
-	/**
-	 * Author Name : Nuttan Abhijan 
-	 * : Select element from the drop down based on the visible text
-	 */
-	public void selectByVisibleText(String controlName, String visibleText) {
-		WebElement element = getElement(controlName);
-		Select select = new Select(element);
-		select.selectByValue(visibleText);
-	}
-
 	/**
 	 * Author Name : Nuttan Abhijan
 	 * : Returns the text of the web element
@@ -147,16 +93,8 @@ public class WebElementFactory {
 			return By.id(controlProperty);
 		case "name":
 			return By.name(controlProperty);
-		case "linktext":
-			return By.linkText(controlProperty);
-		case "partiallinktext":
-			return By.partialLinkText(controlProperty);
 		case "classname":
 			return By.className(controlProperty);
-		case "cssSelector":
-			return By.cssSelector(controlProperty);
-		case "tagname":
-			return By.tagName(controlProperty);
 		default:
 			return null;
 		}
@@ -180,69 +118,6 @@ public class WebElementFactory {
 		} else {
 			return element.get(0);
 		}
-	}
-
-	/**
-	 * Author Name : Nuttan Abhijan
-	 * : Checks if the elements are not present on the page
-	 */
-	public List<WebElement> getElementNotPresent(String controlName) {
-
-		ObjectFactory factory = new ObjectFactory();
-		factory.createObjectMap();
-		ObjectMap<String, UIControlObject> map = factory.getObjectMap();
-		UIControlObject obj = map.get(controlName);
-		By elementLocator = getLocator(obj.getControlProperty(), obj.getTypeOfProperty());
-		List<WebElement> element = driver.findElements(elementLocator);
-		if (element.size() == 0) {
-			Reporter.log("Elements are not present");
-		} else {
-			return element;
-		}
-		return element;
-	}
-
-	/**
-	 * Author Name : Nuttan Abhijan
-	 * : Gets the list elements on the page based on the specified control name
-	 * 
-	 * @throws NoSuchElementException
-	 */
-	public List<WebElement> getElements(String controlName) {
-		ObjectFactory factory = new ObjectFactory();
-		factory.createObjectMap();
-		ObjectMap<String, UIControlObject> map = factory.getObjectMap();
-		;
-		UIControlObject obj = map.get(controlName);
-		By locator = getLocator(obj.getControlProperty(), obj.getTypeOfProperty());
-		List<WebElement> element = driver.findElements(locator);
-		if (element.size() == 0) {
-			screenshots.takeScreenShots();
-			throw new ExceptionHandling_NoSuchElementException(controlName);
-		} else {
-			return element;
-		}
-	}
-
-	/**
-	 * Author Name : Nuttan Abhijan 
-	 * Checks if the frame is present or not
-	 */
-	public Boolean isFramePresent() {
-		if (driver.findElements(By.tagName("frame")).size() == 0) {
-			return false;
-		} else {
-			return true;
-		}
-	}
-
-	/**
-	 * Author Name : Nuttan Abhijan 
-	 * Finds the child elements based on the xpath property
-	 */
-	public List<WebElement> findElementsByXpath(String elementLocator) {
-		List<WebElement> element = driver.findElements(By.xpath(elementLocator));
-		return element;
 	}
 
 	/**

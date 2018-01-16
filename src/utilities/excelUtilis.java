@@ -12,7 +12,7 @@ public class excelUtilis {
 	private static HSSFSheet ExcelWSheet;
 	private static HSSFWorkbook ExcelWBook;
 	private static HSSFCell Cell;
-	public static void setExcelFile(String Path, String SheetName) throws Exception {
+	public  static void setExcelFile(String Path, String SheetName) throws Exception {
 		try {
 			// Open the Excel file
 			FileInputStream ExcelFile = new FileInputStream(Path);
@@ -34,48 +34,4 @@ public class excelUtilis {
 			return "";
 		}
 	}
-
-	public static String getExactCellData(String RowValue) {
-		String rowMatch = null;
-		int rows1 = ExcelWSheet.getFirstRowNum();
-		int rows2 = ExcelWSheet.getLastRowNum();
-		for (int i = rows1; i <= rows2; i++) {
-			Cell = ExcelWSheet.getRow(i).getCell(0);
-			if (RowValue.contains(Cell.getStringCellValue())) {
-				Cell = ExcelWSheet.getRow(i).getCell(1);
-				rowMatch = Cell.getStringCellValue();
-			}
-		}
-		return rowMatch;
-	}
-
-	public static String getFolderStructureData(String RowValue) {
-		String rowMatch = null;
-		int rows1 = ExcelWSheet.getFirstRowNum();
-		int rows2 = ExcelWSheet.getLastRowNum();
-		for (int i = rows1; i <= rows2; i++) {
-			Cell = ExcelWSheet.getRow(i).getCell(0);
-			if (RowValue.contains(Cell.getStringCellValue())) {
-				Cell = ExcelWSheet.getRow(i).getCell(2);
-				rowMatch = Cell.getStringCellValue();
-			}
-		}
-		return rowMatch;
-	}
-	
-	public static String getNodeValueData(String RowValue) {
-		String rowMatch = null;
-
-		int rows1 = ExcelWSheet.getFirstRowNum();
-		int rows2 = ExcelWSheet.getLastRowNum();
-		for (int i = rows1; i <= rows2; i++) {
-			Cell = ExcelWSheet.getRow(i).getCell(0);
-			if (RowValue.contains(Cell.getStringCellValue())) {
-				Cell = ExcelWSheet.getRow(i).getCell(3);
-				rowMatch = Cell.getStringCellValue();
-			}
-		}
-		return rowMatch;
-	}
-
 }

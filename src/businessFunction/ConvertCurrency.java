@@ -87,13 +87,13 @@ public class ConvertCurrency {
 		Log.info("Clicking on Convert Button");
 		userActions.clickOn("Currencyconverter_ConvertButton");
 		dynamicWait.waitTime(4);
-		//System.out.println(val+" "+dataMap.get(fromCurrency));
+		//System.out.println(val+ " " +dataMap.get(fromCurrency)+ " " +"@"+ " "+"^[0-9]"+".");
+		//System.out.println(elementFactory.getElementText("Currencyconverter_ValidationMessage"));
 		if (assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"), val+" "+dataMap.get(fromCurrency)) &&
 				assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"), dataMap.get(ToCurrency)) &&	
 				assertions.stringAssertContains(elementFactory.getElementText("Currencyconverter_ValidationMessage"),"Rates updated"))
 		{	
 		driver.switchTo().defaultContent();
-		Log.info("Refreshing the webpage");
 		driver.navigate().refresh();
 		}
 	}

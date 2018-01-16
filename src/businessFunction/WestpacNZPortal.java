@@ -55,7 +55,6 @@ public class WestpacNZPortal {
 			if ((browser.equalsIgnoreCase("firefox")) || (browser.equalsIgnoreCase("chrome"))) {
 
 				driver.get(frameworkConfig.getNewTransactionPortalUrl());
-				verify.verifyAlert();
 			} else if (browser.equalsIgnoreCase("iexplorer")) {
 				driver.get(frameworkConfig.getNewTransactionPortalUrlForInternetExplorer());
 			}

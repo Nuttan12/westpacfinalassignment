@@ -46,16 +46,6 @@ public class UserActions {
 		screenshots = new ScreenShots(driver);
 	}
 
-	public void enterData(String controlName, String text) {
-		try {
-			dynamicWait.waitTime(0.6);
-		} catch (Exception exception) {
-			Reporter.log(ExceptionUtils.getStackTrace(exception));
-		}
-		elementFactory.enterText(controlName, text);
-	}
-
-
 
 	public void clearTextBox(String controlName) {
 		elementFactory.doMouseAction(controlName, "clear");
@@ -94,59 +84,6 @@ public class UserActions {
 		elementFactory.doMouseAction(controlName, "hover");
 	}
 
-	public void hoverOn(WebElement controlName) {
-		Actions actions = new Actions(driver);
-		Action action;
-		actions.moveToElement(controlName);
-		action = actions.build();
-		action.perform();
-	}
-
-
-	public void enterText(String controlname, String text) {
-		String inputText = dataMap.get(text);
-		elementFactory.enterText(controlname, inputText);
-	}
-
-	public void selectFromDropdownMenu(String ControlName, String text) {
-		WebElement element = elementFactory.getElement(ControlName);
-		List<WebElement> list = element.findElements(By.tagName("li"));
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getText().trim().contains(text.trim())) {
-				list.get(i).click();
-				break;
-			}
-		}
-	}
-
-	public void selectFromDropdownMenu(WebElement element, String text) {
-		List<WebElement> list = element.findElements(By.tagName("li"));
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getText().trim().contains(text.trim())) {
-				list.get(i).click();
-				break;
-			}
-		}
-	}
-
-	public void selectFromList(WebElement element, String text) {
-		List<WebElement> list = element.findElements(By.tagName("option"));
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getText().trim().contains(text.trim())) {
-				list.get(i).click();
-				break;
-			}
-		}
-	}
-
-	public void displayValuesInDropdownMenu(String ControlName) {
-		WebElement element = elementFactory.getElement(ControlName);
-		List<WebElement> list = element.findElements(By.tagName("li"));
-		for (int i = 0; i < list.size(); i++) {
-			Reporter.log("The Dropdown values are" + list.get(i).getText());
-
-		}
-	}
 
 	public void switchToParentWindow() {
 		driver.switchTo().window(parentWindow);
@@ -161,11 +98,6 @@ public class UserActions {
 		return true;
 	}
 
-	
-
-	public List<WebElement> getElements(String controlName) {
-		return elementFactory.getElements(controlName);
-	}
 
 	public WebElement getElement(String controlName) {
 		return elementFactory.getElement(controlName);
@@ -184,45 +116,5 @@ public class UserActions {
 
 	public String getCurrentUrl() {
 		return driver.getCurrentUrl();
-	}
-
-	public void switchToFrame(String frameName) {
-		WebElement frame = elementFactory.getElement(frameName);
-		driver.switchTo().frame(frame);
-	}
-
-	public void switchToDefaultContent() {
-		driver.switchTo().defaultContent();
-	}
-
-	public void selectByText(String controlName, String text) {
-		new Select(elementFactory.getElement(controlName)).selectByVisibleText("text");
-	}
-
-
-	public void selectOptionWithText(String controlName, String textToSelect) {
-		WebElement element = elementFactory.getElement(controlName);
-		List<WebElement> list = element.findElements(By.tagName("li"));
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getText().trim().contains(textToSelect.trim())) {
-				list.get(i).click();
-				break;
-			}
-		}
-	}
-
-
-	public void verifyValueFromDropDown(String ControlName) {
-		WebElement element = elementFactory.getElement(ControlName);
-		List<WebElement> list = element.findElements(By.tagName("li"));
-		for (int i = 0; i < list.size() - 1; i++) {
-			if (!list.get(i).getText().isEmpty() || !list.get(i).getAttribute("data-value").isEmpty()) {
-				list.get(i).isDisplayed();
-				Reporter.log("Dropdown Contains values");
-			} else {
-				screenshots.takeScreenShots();
-				Assert.fail("Dropdown is empty");
-			}
-		}
 	}
 }

@@ -51,61 +51,6 @@ public class DynamicWait {
 		}
 	}
 
-	public void waitForElementToBeSelected(String controlName) {
-		ObjectFactory factory = new ObjectFactory();
-		factory.createObjectMap();
-		ObjectMap<String, UIControlObject> map = factory.getObjectMap();
-		;
-		UIControlObject obj = map.get(controlName);
-		By by = elementFactory.getLocator(obj.getControlProperty().toString(), obj.getTypeOfProperty());
-		try {
-			new FluentWait<WebDriver>(driver).withTimeout(60, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.MILLISECONDS)
-					.ignoring(NoSuchElementException.class).until(ExpectedConditions.elementToBeSelected(by));
-		} catch (TimeoutException time) {
-			screenshots.takeScreenShots();
-			Reporter.log("Element " + controlName + "is not found on time " + ExceptionUtils.getStackTrace(time));
-			throw new ExceptionHandling_TimeoutException(controlName);
-		}
-
-	}
-
-
-	public void waitForPresenceOfElementLocated(String controlName) {
-
-		ObjectFactory factory = new ObjectFactory();
-		factory.createObjectMap();
-		ObjectMap<String, UIControlObject> map = factory.getObjectMap();
-		;
-		UIControlObject obj = map.get(controlName);
-		By by = elementFactory.getLocator(obj.getControlProperty().toString(), obj.getTypeOfProperty());
-		try {
-			new FluentWait<WebDriver>(driver).withTimeout(60, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.MILLISECONDS)
-					.ignoring(NoSuchElementException.class, StaleElementReferenceException.class)
-					.until(ExpectedConditions.presenceOfElementLocated(by));
-		} catch (TimeoutException time) {
-			screenshots.takeScreenShots();
-			Reporter.log("Element " + controlName + "is not found on time " + ExceptionUtils.getStackTrace(time));
-			throw new ExceptionHandling_TimeoutException(controlName);
-		}
-
-	}
-	public void waitForVisibilityOfElementLocated(String controlName) {
-		ObjectFactory factory = new ObjectFactory();
-		factory.createObjectMap();
-		ObjectMap<String, UIControlObject> map = factory.getObjectMap();
-		UIControlObject obj = map.get(controlName);
-		By by = elementFactory.getLocator(obj.getControlProperty().toString(), obj.getTypeOfProperty());
-		try {
-			new FluentWait<WebDriver>(driver).withTimeout(60, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.MILLISECONDS)
-					.ignoring(NoSuchElementException.class).until(ExpectedConditions.visibilityOfElementLocated(by));
-		} catch (TimeoutException time) {
-			screenshots.takeScreenShots();
-			Reporter.log("Element " + controlName + "is not found on time " + ExceptionUtils.getStackTrace(time));
-			throw new ExceptionHandling_TimeoutException(controlName);
-		}
-
-	}
-
 	public void waitTillPageLoads() {
 		if (!(driver.equals("Internet Explorer"))) {
 			try {

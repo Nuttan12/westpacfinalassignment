@@ -7,7 +7,7 @@ import objectRepository.UIControlObject;
 import org.openqa.selenium.InvalidElementStateException;
 
 /**
- * Author Name : Nuttan Abhijan
+ * Author Name : Hema Sai Date of Preparation : 13-09-2016 Purpose of Class :
  * Represents the way Invalid Element State Exception is handled
  */
 @SuppressWarnings("serial")
@@ -16,7 +16,7 @@ public class ExceptionHandling_InvalidElementStateException extends InvalidEleme
 	private static String message = null;
 
 	/**
-	 * Author Name : Nuttan Abhijan
+	 * Author Name : Hema Sai Date of Preparation : 13-09-2016 Purpose of Method
 	 * : This method handles InvalidElementStateException exception and returns
 	 * a customized message
 	 * 
@@ -35,7 +35,7 @@ public class ExceptionHandling_InvalidElementStateException extends InvalidEleme
 	}
 
 	/**
-	 * Author Name : Nuttan Abhijan 
+	 * Author Name : Hema Sai Date of Preparation : 13-09-2016 Purpose of Method
 	 * : Returns the customized message
 	 */
 	@Override

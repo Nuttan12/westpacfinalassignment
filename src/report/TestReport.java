@@ -30,7 +30,8 @@ public class TestReport {
 		Date dNow = new Date();
 		SimpleDateFormat ft = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 		SimpleDateFormat ft_filename = new SimpleDateFormat("ddMMyyyyhhmmss");
-		excelUtilis.setExcelFile("D:\\Nuttan_Eclipse\\Syngenta_Report\\Excels\\Book2.xls", "TestData");
+		//InheritableThreadLocal<excelUtilis> excelUtil = new InheritableThreadLocal<excelUtilis>();
+		//excelUtil.get().setExcelFile("D:\\Nuttan_Eclipse\\Syngenta_Report\\Excels\\Book2.xls", "TestData");
 		PrintWriter printWriter = new PrintWriter(new FileWriter(
 				frameProp.getHtmlReport() + "AutomationTestReport_" + ft_filename.format(dNow) + ".html"));
 		printWriter.println(
