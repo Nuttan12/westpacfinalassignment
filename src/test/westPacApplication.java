@@ -262,13 +262,13 @@ public class westPacApplication {
 		convertCurrency.get().convertCurrencyValidation(excelUtil.get().getCellData(3, 0),excelUtil.get().getCellData(2, 0),"1");
 		//Implemented method for Converting US Dollar to Newzealand Dollar
 		log.info("Converting US Dollar to Newzealand Dollar");
-		//convertCurrency.get().convertCurrencyValidation(excelUtil.get().getCellData(2, 0),excelUtil.get().getCellData(3, 0),"1");
+		convertCurrency.get().convertCurrencyValidation(excelUtil.get().getCellData(2, 0),excelUtil.get().getCellData(3, 0),"1");
 		//Implemented method for Converting Pound Sterling to Newzealand Dollar
 		log.info("Converting Pound Sterling to Newzealand Dollar");
-		//convertCurrency.get().convertCurrencyValidation(excelUtil.get().getCellData(4, 0),excelUtil.get().getCellData(3, 0),"1");
+		convertCurrency.get().convertCurrencyValidation(excelUtil.get().getCellData(4, 0),excelUtil.get().getCellData(3, 0),"1");
 		//Implemented method for Converting  Swiss Franc to Euro
 		log.info("Converting Converting  Swiss Franc to Euro");
-		//convertCurrency.get().convertCurrencyValidation(excelUtil.get().getCellData(5, 0),excelUtil.get().getCellData(6, 0),"1");
+		convertCurrency.get().convertCurrencyValidation(excelUtil.get().getCellData(5, 0),excelUtil.get().getCellData(6, 0),"1");
 		logger.log(Status.PASS, MarkupHelper.createLabel("ValidatingConversionCurrency is passed", ExtentColor.GREEN));
 		
 	}	

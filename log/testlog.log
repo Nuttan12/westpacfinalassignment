@@ -461,3 +461,14 @@
 2018-01-16 23:25:57,764 - WestpacApplication -INFO - Converting US Dollar to Newzealand Dollar
 2018-01-16 23:25:57,767 - WestpacApplication -INFO - Converting Pound Sterling to Newzealand Dollar
 2018-01-16 23:25:57,767 - WestpacApplication -INFO - Converting Converting  Swiss Franc to Euro
+2018-01-16 23:49:14,376 - WestpacApplication -INFO - Launching WestpacNewzealand Transaction Portal
+2018-01-16 23:49:21,372 - WestpacApplication -INFO - Clicking on Currency converter option
+2018-01-16 23:49:38,831 - WestpacApplication -INFO - Clicking on convert button
+2018-01-16 23:49:56,957 - WestpacApplication -INFO - Launching WestpacNewzealand Transaction Portal
+2018-01-16 23:50:03,303 - WestpacApplication -INFO - Clicking on Currency converter option
+2018-01-16 23:50:10,622 - WestpacApplication -INFO - Converting Newzealand Dollar to US Dollar
+2018-01-16 23:50:12,255 - utilities.Log -INFO - Entering amount to be converted
+2018-01-16 23:50:18,329 - utilities.Log -INFO - Clicking on Convert Button
+2018-01-16 23:50:39,539 - WestpacApplication -INFO - Converting US Dollar to Newzealand Dollar
+2018-01-16 23:50:39,542 - WestpacApplication -INFO - Converting Pound Sterling to Newzealand Dollar
+2018-01-16 23:50:39,542 - WestpacApplication -INFO - Converting Converting  Swiss Franc to Euro

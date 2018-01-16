@@ -47,10 +47,6 @@ public class UserActions {
 	}
 
 
-	public void clearTextBox(String controlName) {
-		elementFactory.doMouseAction(controlName, "clear");
-	}
-
 	public void clickOn(String controlName) {
 		try {
 			dynamicWait.waitForElementToBeClickable(controlName);
@@ -61,24 +57,6 @@ public class UserActions {
 			throw new ExceptionHandling_InvalidElementStateException(controlName);
 		}
 	}
-
-
-	public void clickAndHold(String controlName) {
-		elementFactory.doMouseAction(controlName, "clickandhold");
-	}
-
-	public void selectValueFromDropDown(String ControlName, String dataName) {
-		String dataElement = dataMap.get(dataName);
-		WebElement element = elementFactory.getElement(ControlName);
-		List<WebElement> list = element.findElements(By.tagName("li"));
-		for (int i = 0; i < list.size(); i++) {
-			if (dataElement.trim().equals(list.get(i).getText().trim())) {
-				list.get(i).click();
-				break;
-			}
-		}
-	}
-
 
 	public void hoverOn(String controlName) {
 		elementFactory.doMouseAction(controlName, "hover");
@@ -112,9 +90,5 @@ public class UserActions {
 		ObjectFactory factory = new ObjectFactory();
 		factory.createObjectMap();
 		return factory.getObjectMap().get(controlName);
-	}
-
-	public String getCurrentUrl() {
-		return driver.getCurrentUrl();
 	}
 }
